@@ -1,0 +1,30 @@
+admin@guided-arrow-aio-01:~/Downloads $ ls
+check-support-one-run-20261014  pi-installed-check-one-run-20261014.tar.gz  pi-installed-check-support-20261014.tar.gz
+admin@guided-arrow-aio-01:~/Downloads $ /home/admin/Downloads/check-support-one-run-20261014/run_pi_checks.sh --accept-trusted-native
+inputs: running
+FAIL: /home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/report.txt
+Evidence: /home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/evidence.tar.gz
+admin@guided-arrow-aio-01:~/Downloads $ cat /home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/report.txt
+Installed-application check: FAIL
+Selected application: /home/admin/satgs-pi-test/satgs-app-manager
+Selected source: /home/admin/satgs-pi-test/source-280fb4a8
+Required source commit: 280fb4a8dc11efa35c190c27ebb147e5a2db689b
+Support: /home/admin/Downloads/check-support-one-run-20261014
+Wall-clock synchronization: UNCONFIRMED
+Elapsed seconds (monotonic): 0.057
+inputs: FAIL; child exit=NOT RUN; source path is missing: /home/admin/satgs-pi-test/source-280fb4a8/.git
+binding: NOT RUN; child exit=NOT RUN; 
+admission: NOT RUN; child exit=NOT RUN; 
+check: NOT RUN; child exit=NOT RUN; 
+Primary: {"message": "source path is missing: /home/admin/satgs-pi-test/source-280fb4a8/.git", "phase": "inputs", "type": "SourceError"}
+Cleanup: {}
+Capture errors: []
+Packaging: {"excludes": "final report.txt and summary.json describe packaging after archive verification", "files": 5, "path": "/home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/evidence.tar.gz", "sha256": "7b704aca3c775e6665afd712454e6555d8260e8d49b8629595225640a00d1fa0", "status": "PASS", "uncompressed_bytes": 2606}
+Only selected installed imports/resources/protobuf are checked; no owner is constructed.
+Scientific libraries and pymavlink are not imported by this checker.
+Navigation, physical state and hardware are NOT QUALIFIED. No manager or service is launched.
+Python API/audit restrictions trust bound CPython/stdlib native internals; not syscall isolation.
+A failed/incomplete attempt must not be bypassed by reinstalling, chmod, hook removal or unguarded checks.
+Attach this report.txt and the verified evidence.tar.gz when packaging passed.
+Complete recording requires completion.json matching report/summary and launcher exit 0 for PASS.
+No claim of complete capture applies to SIGKILL, power loss or failed writes.
