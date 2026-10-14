@@ -1,29 +1,33 @@
-admin@guided-arrow-aio-01:~/Downloads $ ls
-check-support-one-run-20261014  pi-installed-check-one-run-20261014.tar.gz  pi-installed-check-support-20261014.tar.gz
-admin@guided-arrow-aio-01:~/Downloads $ /home/admin/Downloads/check-support-one-run-20261014/run_pi_checks.sh --accept-trusted-native
+admin@guided-arrow-aio-01:~/Downloads $ cd check-support-offline-20261014-v2/
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ ./run_pi_checks.sh -accept-trusted-native
+usage: run_pi_checks.py [-h] [--accept-trusted-native]
+run_pi_checks.py: error: unrecognized arguments: -accept-trusted-native
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ ./run_pi_checks.sh --accept-trusted-native
 inputs: running
-FAIL: /home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/report.txt
-Evidence: /home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/evidence.tar.gz
-admin@guided-arrow-aio-01:~/Downloads $ cat /home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/report.txt
+binding: running
+FAIL: /home/admin/satgs-pi-test/installed-check-run-eh1zctbe/report.txt
+Evidence: /home/admin/satgs-pi-test/installed-check-run-eh1zctbe/evidence.tar.gz
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ cat /home/admin/satgs-pi-test/installed-check-run-eh1zctbe/report.txt
 Installed-application check: FAIL
 Selected application: /home/admin/satgs-pi-test/satgs-app-manager
-Selected source: /home/admin/satgs-pi-test/source-280fb4a8
-Required source commit: 280fb4a8dc11efa35c190c27ebb147e5a2db689b
-Support: /home/admin/Downloads/check-support-one-run-20261014
+Bundled checker references: /home/admin/Downloads/check-support-offline-20261014-v2/reference
+Codex-side export provenance: 280fb4a8dc11efa35c190c27ebb147e5a2db689b; no Pi Git verification
+Support: /home/admin/Downloads/check-support-offline-20261014-v2
 Wall-clock synchronization: UNCONFIRMED
-Elapsed seconds (monotonic): 0.057
-inputs: FAIL; child exit=NOT RUN; source path is missing: /home/admin/satgs-pi-test/source-280fb4a8/.git
-binding: NOT RUN; child exit=NOT RUN; 
+Elapsed seconds (monotonic): 1.179
+inputs: PASS; child exit=NOT RUN; 
+binding: FAIL; child exit=NOT RUN; base startup hook needs separate review: __pycache__/sitecustomize.cpython-311.pyc
 admission: NOT RUN; child exit=NOT RUN; 
 check: NOT RUN; child exit=NOT RUN; 
-Primary: {"message": "source path is missing: /home/admin/satgs-pi-test/source-280fb4a8/.git", "phase": "inputs", "type": "SourceError"}
+Primary: {"message": "base startup hook needs separate review: __pycache__/sitecustomize.cpython-311.pyc", "phase": "binding", "type": "RuntimeError"}
 Cleanup: {}
 Capture errors: []
-Packaging: {"excludes": "final report.txt and summary.json describe packaging after archive verification", "files": 5, "path": "/home/admin/satgs-pi-test/installed-check-run-i4i4r5l0/evidence.tar.gz", "sha256": "7b704aca3c775e6665afd712454e6555d8260e8d49b8629595225640a00d1fa0", "status": "PASS", "uncompressed_bytes": 2606}
+Packaging: {"excludes": "final report.txt and summary.json describe packaging after archive verification", "files": 9, "path": "/home/admin/satgs-pi-test/installed-check-run-eh1zctbe/evidence.tar.gz", "sha256": "b93f471f3937fff576994d94ea6e5bfa7735b82bb5950871081c970f38764c91", "status": "PASS", "uncompressed_bytes": 9590}
 Only selected installed imports/resources/protobuf are checked; no owner is constructed.
 Scientific libraries and pymavlink are not imported by this checker.
 Navigation, physical state and hardware are NOT QUALIFIED. No manager or service is launched.
 Python API/audit restrictions trust bound CPython/stdlib native internals; not syscall isolation.
+Bound importer cache absence is recorded separately; it grants no cache-byte access.
 A failed/incomplete attempt must not be bypassed by reinstalling, chmod, hook removal or unguarded checks.
 Attach this report.txt and the verified evidence.tar.gz when packaging passed.
 Complete recording requires completion.json matching report/summary and launcher exit 0 for PASS.
