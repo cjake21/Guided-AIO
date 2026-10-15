@@ -1,8 +1,0 @@
-Startup collection: DIAGNOSTIC ONLY
-Installed application: NOT RUN
-Hook and cache code: NOT EXECUTED
-Observations: 109; unresolved: 0
-Actual site startup and loader reachability still require review.
-No hook is admitted by this report. Existing files/environments were not changed.
-Trust: isolated CPython/stdlib and read-only dpkg-query; not syscall isolation.
-Attach report.txt, summary.json and evidence.tar.gz. Preserve unresolved observations.
