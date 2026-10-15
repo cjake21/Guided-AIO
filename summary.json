@@ -1,0 +1,3796 @@
+{
+  "application": "/home/admin/satgs-pi-test/satgs-app-manager",
+  "attempt": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k",
+  "capture_errors": [],
+  "cleanup": {
+    "admission": {
+      "errors": [],
+      "exception": null,
+      "quiescent": true,
+      "residual": false,
+      "timeout": false
+    },
+    "check": {
+      "errors": [],
+      "exception": null,
+      "quiescent": true,
+      "residual": false,
+      "timeout": false
+    }
+  },
+  "duration_seconds": 37.824118569958955,
+  "end_utc": "2026-10-15T14:46:16.254011+00:00",
+  "environment": {
+    "LANG": "C",
+    "LC_ALL": "C",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "STOMP_SKIP_HOSTNAME_SCAN": "1",
+    "TZ": "UTC"
+  },
+  "launcher_argv": [
+    "/usr/bin/python3.11",
+    "-I",
+    "-B",
+    "-S",
+    "./run_pixhawk_checks.py",
+    "--accept-trusted-native"
+  ],
+  "packaging": {
+    "excludes": "final report.txt and summary.json describe packaging after archive verification",
+    "files": 26,
+    "path": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/evidence.tar.gz",
+    "sha256": "9caabda5687291150cfb1fdc577af85b27d83ba1701af34972c8c1bcb4a40b16",
+    "status": "PASS",
+    "uncompressed_bytes": 2578594
+  },
+  "phases": {
+    "admission": {
+      "api": "behavior_target.run_phase(admit)",
+      "arguments": {
+        "admission": null,
+        "admission_sha": null,
+        "binding": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/binding.json",
+        "binding_sha": "8cc0294840d984963311c209300546bbe96febc099ac6564d44b373f0449ef8d",
+        "mode": "admit",
+        "records": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/admission"
+      },
+      "child_exit": 0,
+      "duration_seconds": 15.135011732112616,
+      "execution": "in-process reviewed support API",
+      "os_exit": null,
+      "start_utc": "2026-10-15T14:45:45.933139+00:00",
+      "status": "PASS"
+    },
+    "binding": {
+      "api": "behavior_target.prepare_binding",
+      "arguments": {
+        "application": "/home/admin/satgs-pi-test/satgs-app-manager"
+      },
+      "duration_seconds": 7.286563421948813,
+      "execution": "in-process reviewed support API",
+      "os_exit": null,
+      "start_utc": "2026-10-15T14:45:38.635859+00:00",
+      "status": "PASS"
+    },
+    "check": {
+      "api": "behavior_target.run_phase(offline)",
+      "arguments": {
+        "admission": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/admission/admission.json",
+        "admission_sha": "8c265b4a5df3f99e3d6490b94c0396734d62d6a1e881f304d64a987a757cbff3",
+        "binding": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/binding.json",
+        "binding_sha": "8cc0294840d984963311c209300546bbe96febc099ac6564d44b373f0449ef8d",
+        "mode": "offline",
+        "records": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/check"
+      },
+      "child_exit": 0,
+      "duration_seconds": 15.169431342976168,
+      "execution": "in-process reviewed support API",
+      "os_exit": null,
+      "start_utc": "2026-10-15T14:46:01.073861+00:00",
+      "status": "PASS"
+    },
+    "inputs": {
+      "api": "exact support manifest and file membership",
+      "arguments": {
+        "support": "/home/admin/Downloads/pixhawk-offline-check-20261015-v1"
+      },
+      "duration_seconds": 0.04824181494768709,
+      "execution": "in-process reviewed support API",
+      "os_exit": null,
+      "start_utc": "2026-10-15T14:45:38.584574+00:00",
+      "status": "PASS"
+    }
+  },
+  "primary": null,
+  "recording": {
+    "report_sha256": "af3f09fc3def1a0b774096b12b3bc9f1c6c5f8487a06a694c10b96430f7bba65",
+    "status": "PASS"
+  },
+  "schema": 1,
+  "script_argv": [
+    "./run_pixhawk_checks.py",
+    "--accept-trusted-native"
+  ],
+  "signals": [],
+  "source": "/home/admin/Downloads/pixhawk-offline-check-20261015-v1/reference",
+  "start_utc": "2026-10-15T14:45:38.584332+00:00",
+  "status": "PASS",
+  "support": "/home/admin/Downloads/pixhawk-offline-check-20261015-v1",
+  "target_facts": {
+    "glibc": "2.36",
+    "implementation": "CPython",
+    "libc": "glibc",
+    "machine": "aarch64",
+    "pointer_bits": 64,
+    "py_debug": 0,
+    "python": "3.11.2",
+    "soabi": "cpython-311-aarch64-linux-gnu",
+    "system": "Linux"
+  },
+  "verified_behavior": {
+    "cases": [
+      {
+        "name": "complete_v2",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 1.0,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 93,
+              "payload_sha256": "690fc7e854e4647b3db4a668bf8a0f6c17ed7d42a9545954bf690f7f4c128797",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Previous ATTITUDE aggregate publishes on next ATTITUDE; radians, degrees, metres and centidegrees are preserved as implemented.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.422969154,
+              "decoded_fields": {
+                "autopilot": 3,
+                "base_mode": 0,
+                "custom_mode": 0,
+                "mavlink_version": 3,
+                "system_status": 3,
+                "type": 2
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "heartbeat",
+              "message_type": "HEARTBEAT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {},
+              "wire_length": 21,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "adbfb253d0476802bec9b33e1d7ad09d68d04ba01fd76ca73d0176f33b96d7da"
+            },
+            {
+              "arrival_monotonic": 700248.424216006,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.424463469,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "6873194a8fba7f0b4732785f96c1b5e3169c7802d7c2605a4e6c6bdfb523e1ab"
+            },
+            {
+              "arrival_monotonic": 700248.424579783,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.424651172,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "463be80ae178cc2f6d2ba2bbfdf00696baf9f3e425ee60677e92b1611937368f"
+            },
+            {
+              "arrival_monotonic": 700248.425791246,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 1.0,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 6,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "17235900915c845072ffb4111334694f1d16705c73f3dbed0b9435f565945bb2"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "position_arrival_order",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 12.345000267028809,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 42.12345504760742,
+                "lon": -71.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 12.345000267028809,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 42.12345504760742,
+                "lon": -71.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 93,
+              "payload_sha256": "0d6c851718e32c35398c2caf2c086c4d1e37157d8853f795fafca14910cdf6ca",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Later raw primary GPS replaces global estimated position while global heading remains.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.429904932,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.430110709,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "463be80ae178cc2f6d2ba2bbfdf00696baf9f3e425ee60677e92b1611937368f"
+            },
+            {
+              "arrival_monotonic": 700248.431248876,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "6873194a8fba7f0b4732785f96c1b5e3169c7802d7c2605a4e6c6bdfb523e1ab"
+            },
+            {
+              "arrival_monotonic": 700248.431341635,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.431400172,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "secondary_position_ignored",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 0.0,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 0.0,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 58,
+              "payload_sha256": "fe5a6e77f08d95ae3771d189ba3b036590a42e68f83fcf64d3b4ac017385073f",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Secondary GPS position is discarded; selected secondary status, count and yaw remain.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.432346339,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.432479154,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.432539709,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "pre_attitude_discarded",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 0.0,
+                "gps2Status": 0.0,
+                "gps2Vis": 0.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 0.0,
+                "gps2Status": 0.0,
+                "gps2Vis": 0.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 43,
+              "payload_sha256": "c7864c094cd6e2a8ea31334edb974a3b3a190721e1f3c31835b00e92b0dba9db",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "GPS and global position received before first ATTITUDE are discarded.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.433340024,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "6873194a8fba7f0b4732785f96c1b5e3169c7802d7c2605a4e6c6bdfb523e1ab"
+            },
+            {
+              "arrival_monotonic": 700248.433371728,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.433398839,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "463be80ae178cc2f6d2ba2bbfdf00696baf9f3e425ee60677e92b1611937368f"
+            },
+            {
+              "arrival_monotonic": 700248.434479024,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.434604895,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "attitude_only_defaults",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 0.0,
+                "gps2Status": 0.0,
+                "gps2Vis": 0.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 0.0,
+                "gps2Status": 0.0,
+                "gps2Vis": 0.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 0.0,
+                "lon": 0.0,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 43,
+              "payload_sha256": "c7864c094cd6e2a8ea31334edb974a3b3a190721e1f3c31835b00e92b0dba9db",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Incomplete aggregate numeric defaults publish and pass strict callback; acceptance does not establish component presence.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.435323413,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.435450413,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "final_aggregate_unpublished",
+        "observations": {
+          "callback_results": [],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 23.456,
+            "gps2Status": 5,
+            "gps2Vis": 19,
+            "gps2Yaw": 23456,
+            "gpsStatus": 4,
+            "gpsVis": 18,
+            "gpsYaw": 12345,
+            "gps_time": 0,
+            "hdg": 23456,
+            "lat": 43.1234567,
+            "lon": -72.2345678,
+            "pc_time": "2026-10-15T12:00:00.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [],
+          "semantics": "Complete final aggregate stays unpublished when no later ATTITUDE arrives.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.436217598,
+              "decoded_fields": {
+                "autopilot": 3,
+                "base_mode": 0,
+                "custom_mode": 0,
+                "mavlink_version": 3,
+                "system_status": 3,
+                "type": 2
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "heartbeat",
+              "message_type": "HEARTBEAT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {},
+              "wire_length": 21,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "adbfb253d0476802bec9b33e1d7ad09d68d04ba01fd76ca73d0176f33b96d7da"
+            },
+            {
+              "arrival_monotonic": 700248.437343339,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.437461395,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "6873194a8fba7f0b4732785f96c1b5e3169c7802d7c2605a4e6c6bdfb523e1ab"
+            },
+            {
+              "arrival_monotonic": 700248.43754208,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.437593728,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "463be80ae178cc2f6d2ba2bbfdf00696baf9f3e425ee60677e92b1611937368f"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "mixed_sources_heartbeat_ignored",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 93,
+              "payload_sha256": "690fc7e854e4647b3db4a668bf8a0f6c17ed7d42a9545954bf690f7f4c128797",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Mixed decoded systems/components and heartbeat identity do not gate aggregate assembly; configured manager ID 17 remains the output ID.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.438967117,
+              "decoded_fields": {
+                "autopilot": 3,
+                "base_mode": 0,
+                "custom_mode": 0,
+                "mavlink_version": 3,
+                "system_status": 3,
+                "type": 2
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "heartbeat",
+              "message_type": "HEARTBEAT",
+              "sequence": 11,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {},
+              "wire_length": 21,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "a65c5e6325ded75e1252551762f20977feef065cd6cba762db5e13ac46272e0a"
+            },
+            {
+              "arrival_monotonic": 700248.440085209,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 12,
+              "source_component": 191,
+              "source_system": 77,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "10107ed903e102324dccdd0419a7695d98c04225d4008704568983d52b3b66e3"
+            },
+            {
+              "arrival_monotonic": 700248.440204321,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 13,
+              "source_component": 2,
+              "source_system": 43,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "b13d7f0f4026e2b9bd641e66404fd56749739f2286268b5c88e06a9851621f95"
+            },
+            {
+              "arrival_monotonic": 700248.440280598,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 14,
+              "source_component": 3,
+              "source_system": 44,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "3ce7ff03a5c1883e22846c15df0fb035e30a7d0a8db5cf4c8384f9af32bea387"
+            },
+            {
+              "arrival_monotonic": 700248.440331154,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 15,
+              "source_component": 4,
+              "source_system": 45,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "2336570c14d499ca3df3f2eb23a6eed2f841f88b4b55f444cc0186c8fd8a826c"
+            },
+            {
+              "arrival_monotonic": 700248.441433635,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 6,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 16,
+              "source_component": 5,
+              "source_system": 55,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "61817995f70fa1c2352e452ed1423f7a21ce5b4ded404c34e5fb3f5cba26368c"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "source_times_ignored",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 93,
+              "payload_sha256": "690fc7e854e4647b3db4a668bf8a0f6c17ed7d42a9545954bf690f7f4c128797",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Old, boot-relative, epoch-like and regressing source times remain fixture evidence only; aggregate UTC is local ATTITUDE receipt time.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.442253895,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 60000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 60000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "4bbda92ff63d6417274bb3e66e1b054c225320f971b28377428962fed1d338fb"
+            },
+            {
+              "arrival_monotonic": 700248.442380191,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 1,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 1
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "439e096c7755b805b5e67108ef92469f5f1161854374f87870311bf0e61bcddd"
+            },
+            {
+              "arrival_monotonic": 700248.442458024,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 1700000000000000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 1700000000000000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "5b52103215119af7441456f1b307d350081123e0bd4651a4549469711756d21a"
+            },
+            {
+              "arrival_monotonic": 700248.442509246,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 1,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 1
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "5ed1291d307984f7c72e6f687ab262c4e384594a44af5e987f842ef02759ae3d"
+            },
+            {
+              "arrival_monotonic": 700248.443611913,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 10,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 10
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "82417a13cbd732165b63331a3640c245224920bbf06ee7d8c0c9d622986800ca"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "no_fix_and_sentinels",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": -12.345000267028809,
+                "gps2Status": 1.0,
+                "gps2Vis": 255.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 255.0,
+                "gpsYaw": 65535.0,
+                "gps_time": 0.0,
+                "hdg": 65535.0,
+                "lat": 91.0,
+                "lon": 181.0,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": -12.345000267028809,
+                "gps2Status": 1.0,
+                "gps2Vis": 255.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 255.0,
+                "gpsYaw": 65535.0,
+                "gps_time": 0.0,
+                "hdg": 65535.0,
+                "lat": 91.0,
+                "lon": 181.0,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 83,
+              "payload_sha256": "3e0ee7bfb8d504315dd37ef2865fa46e081e044584c351b435b871a9c4d50b7f",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "No-fix indicators, unknown satellite count, unavailable yaw/heading and impossible geodetic coordinates remain finite and pass strict callback.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.444431672,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.444554135,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 0,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 255,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 65535
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "4f372352635636b57fbd347f06c6737b067d04270f8f6ca715adf6cf2fc70aeb"
+            },
+            {
+              "arrival_monotonic": 700248.444631487,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 1,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 255,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 47,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "efcb77819a3522f82bf4dbc8b4c65d16782fbb2300b9d48f3218f3c005df90cd"
+            },
+            {
+              "arrival_monotonic": 700248.444681709,
+              "decoded_fields": {
+                "alt": -12345,
+                "hdg": 65535,
+                "lat": 910000000,
+                "lon": 1810000000,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "e77a9da49d39250e4c597e2d828ac111662df701f85b001cbeb5a203196d40d9"
+            },
+            {
+              "arrival_monotonic": 700248.445784969,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "north_yaw_preserved",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 36000.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 36000.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 36000.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 36000.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 88,
+              "payload_sha256": "c3d2c4daaa3a3d68a407b472c8e5c889773de44357015bb3185856a919bb4532",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "GPS north sentinel 36000 remains centidegrees without zero normalization; global heading zero remains separate.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.446572821,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.44669545,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 36000
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "cdafe14110925a1a779b537478e61cfb66b41d91718f1466ff5da5f57b0c65d2"
+            },
+            {
+              "arrival_monotonic": 700248.446772543,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 36000
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "d3170b3bcb61b052628f7af482c583d3e5597dfa09623ca67334a4a4901ad0df"
+            },
+            {
+              "arrival_monotonic": 700248.446822728,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 0,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 37,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "3fa4592037ec52315fe19e214cd8ae9f2009c9618c943d96b0f48987b43e32b7"
+            },
+            {
+              "arrival_monotonic": 700248.447925728,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "nonfinite_attitude_rejected_downstream",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": false,
+              "rejected_messages": 1,
+              "row": null
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": {
+                  "nonfinite": "+inf"
+                },
+                "pix_id": 17,
+                "roll": {
+                  "nonfinite": "nan"
+                },
+                "yaw": {
+                  "nonfinite": "-inf"
+                }
+              },
+              "payload_length": 93,
+              "payload_sha256": "cf5bc943e35335b48224e82b574032a28b0ac5d5f05f6ee216e6e6d9072ab8a0",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Manager publishes nonfinite ATTITUDE unchanged; strict callback rejects that protobuf before updating selected state.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.448707246,
+              "decoded_fields": {
+                "pitch": {
+                  "nonfinite": "+inf"
+                },
+                "pitchspeed": 0.0,
+                "roll": {
+                  "nonfinite": "nan"
+                },
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": {
+                  "nonfinite": "-inf"
+                },
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "eca1957f76ad8fa78af61a1c2005456396ed6a0808bc3b57f8372e1cbe90f3c1"
+            },
+            {
+              "arrival_monotonic": 700248.448827932,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "6873194a8fba7f0b4732785f96c1b5e3169c7802d7c2605a4e6c6bdfb523e1ab"
+            },
+            {
+              "arrival_monotonic": 700248.448904413,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.448953746,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "463be80ae178cc2f6d2ba2bbfdf00696baf9f3e425ee60677e92b1611937368f"
+            },
+            {
+              "arrival_monotonic": 700248.450055246,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "v1_missing_yaw_partial_update",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 23.45599937438965,
+                "gps2Status": 1.0,
+                "gps2Vis": 255.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 2.0,
+                "gpsVis": 9.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            },
+            {
+              "exception": "AttributeError",
+              "level": "ERROR",
+              "message": "'MAVLink_gps_raw_int_message' object has no attribute 'yaw'"
+            },
+            {
+              "exception": "AttributeError",
+              "level": "ERROR",
+              "message": "'MAVLink_gps2_raw_message' object has no attribute 'yaw'"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v10.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 1.0,
+                "gps2Vis": 255.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 2.0,
+                "gpsVis": 9.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 83,
+              "payload_sha256": "d288803fe71a6d322cbad6ce75da79c59865cdd69bde0ee99ce2173c01b5a811",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Fixed v1 decoder yields GPS objects without yaw: fix/count mutate before caught AttributeErrors, yaw defaults remain zero, and prior global coordinates/heading survive the skipped primary position update.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.450716154,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "decoder_protocol": "1.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 36,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "1af8de9e52ba8dcd9727304f0c3d6e85fce93d0c44bf2dc22eacbd448d1f513d"
+            },
+            {
+              "arrival_monotonic": 700248.450866858,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "decoder_protocol": "1.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 2,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 36,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "bfa0d55a5da0eed4b8bc318d72e454a49b8f6eef972c649e388cad9128ef08d8"
+            },
+            {
+              "arrival_monotonic": 700248.451990117,
+              "decoded_fields": {
+                "alt": 99999,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 2,
+                "lat": 510000000,
+                "lon": 100000000,
+                "satellites_visible": 9,
+                "time_usec": 12000000,
+                "vel": 300
+              },
+              "decoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "decoder_protocol": "1.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 3,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 38,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "737eb9aa03e9827796b52b5cd429427ffe8d83b2264aee9273ebe82e1087800b"
+            },
+            {
+              "arrival_monotonic": 700248.453135043,
+              "decoded_fields": {
+                "alt": 54321,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 1,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 255,
+                "time_usec": 12001000,
+                "vel": 310
+              },
+              "decoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "decoder_protocol": "1.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 4,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 43,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "dbcb1e92dee2faf85e59c18dc60c7d9ce1a4572e34bb92f06542e2e1f1e39c79"
+            },
+            {
+              "arrival_monotonic": 700248.454258876,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "decoder_protocol": "1.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 36,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "1af8de9e52ba8dcd9727304f0c3d6e85fce93d0c44bf2dc22eacbd448d1f513d"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "v1_wire_decoded_by_v2_defaults_yaw",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 99.9990005493164,
+                "gps2Status": 1.0,
+                "gps2Vis": 255.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 2.0,
+                "gpsVis": 9.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 51.0,
+                "lon": 10.0,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 99.9990005493164,
+                "gps2Status": 1.0,
+                "gps2Vis": 255.0,
+                "gps2Yaw": 0.0,
+                "gpsStatus": 2.0,
+                "gpsVis": 9.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 51.0,
+                "lon": 10.0,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 83,
+              "payload_sha256": "34c5cabb91cb0c9145f6bb4a8f553f47721eb7dbcf646be2b94a65c8dd2026cf",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Fixed v2 decoder accepts v1 frames and supplies yaw extension zero; manager reaches primary position update without the fixed-v1 decoder AttributeError. This does not test mavutil parser selection.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.455067172,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 36,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "1af8de9e52ba8dcd9727304f0c3d6e85fce93d0c44bf2dc22eacbd448d1f513d"
+            },
+            {
+              "arrival_monotonic": 700248.455189895,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 2,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 36,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "bfa0d55a5da0eed4b8bc318d72e454a49b8f6eef972c649e388cad9128ef08d8"
+            },
+            {
+              "arrival_monotonic": 700248.456300191,
+              "decoded_fields": {
+                "alt": 99999,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 2,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 510000000,
+                "lon": 100000000,
+                "satellites_visible": 9,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 3,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 38,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "737eb9aa03e9827796b52b5cd429427ffe8d83b2264aee9273ebe82e1087800b"
+            },
+            {
+              "arrival_monotonic": 700248.456381339,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 1,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 255,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 4,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 43,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "dbcb1e92dee2faf85e59c18dc60c7d9ce1a4572e34bb92f06542e2e1f1e39c79"
+            },
+            {
+              "arrival_monotonic": 700248.456431043,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v10.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 36,
+              "wire_magic": 254,
+              "wire_protocol": "1.0",
+              "wire_sha256": "1af8de9e52ba8dcd9727304f0c3d6e85fce93d0c44bf2dc22eacbd448d1f513d"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "protobuf_precision_and_utc",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 12.345000267028809,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 42.12345504760742,
+                "lon": -71.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": 0.20000000298023224,
+                "pix_id": 17,
+                "roll": 0.10000000149011612,
+                "yaw": -0.30000001192092896
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "latitude_float32_error_degrees": -1.6523925765454806e-06,
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 12.345000267028809,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 4.0,
+                "gpsVis": 18.0,
+                "gpsYaw": 12345.0,
+                "gps_time": 0.0,
+                "hdg": 0.0,
+                "lat": 42.12345504760742,
+                "lon": -71.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": 0.20000000298023224,
+                "pix_id": 17,
+                "roll": 0.10000000149011612,
+                "yaw": -0.30000001192092896
+              },
+              "payload_length": 88,
+              "payload_sha256": "a77deb06f954d3689d2e3b62034ecae4d075200df6beb9f8e2a4b01ff5b66041",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Protobuf float32 rounds converted coordinates; aggregate UTC serialization drops fixture receipt microseconds.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.45718058,
+              "decoded_fields": {
+                "pitch": 0.20000000298023224,
+                "pitchspeed": 0.0,
+                "roll": 0.10000000149011612,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": -0.30000001192092896,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "e2f8d05645907b881b8c19ab4f3a7bd12ebbacb246e8c7e55fb45fec877b7a5f"
+            },
+            {
+              "arrival_monotonic": 700248.457300506,
+              "decoded_fields": {
+                "alt": 12345,
+                "alt_ellipsoid": 0,
+                "cog": 400,
+                "eph": 100,
+                "epv": 200,
+                "fix_type": 4,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 421234567,
+                "lon": -712345678,
+                "satellites_visible": 18,
+                "time_usec": 12000000,
+                "v_acc": 0,
+                "vel": 300,
+                "vel_acc": 0,
+                "yaw": 12345
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps_raw_int",
+              "message_type": "GPS_RAW_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12000000
+              },
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "6873194a8fba7f0b4732785f96c1b5e3169c7802d7c2605a4e6c6bdfb523e1ab"
+            },
+            {
+              "arrival_monotonic": 700248.457376709,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.457426654,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "bad_frame_recovery",
+        "observations": {
+          "callback_results": [
+            {
+              "accepted": true,
+              "rejected_messages": 0,
+              "row": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15T12:00:00+00:00",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              }
+            }
+          ],
+          "decoder_scope": "Explicit fixed parser receiving complete in-memory frames; no mavutil protocol auto-negotiation or fragmented-stream qualification.",
+          "expected_legacy_logs": [
+            {
+              "exception": null,
+              "level": "WARNING",
+              "message": "Incomplete Message"
+            },
+            {
+              "exception": "MAVError",
+              "level": "ERROR",
+              "message": "invalid MAVLink CRC in msgID 24 0xacad should be 0xadad"
+            }
+          ],
+          "final_unpublished_fields": {
+            "alt": 0,
+            "gps2Status": 0,
+            "gps2Vis": 0,
+            "gps2Yaw": 0,
+            "gpsStatus": 0,
+            "gpsVis": 0,
+            "gpsYaw": 0,
+            "gps_time": 0,
+            "hdg": 0,
+            "lat": 0,
+            "lon": 0,
+            "pc_time": "2026-10-15T12:00:01.987654+00:00",
+            "pitch": -0.5,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.75
+          },
+          "fixture_utc_calls": [
+            "2026-10-15T12:00:00.987654+00:00",
+            "2026-10-15T12:00:01.987654+00:00"
+          ],
+          "parser_dialect": "pymavlink.dialects.v20.ardupilotmega",
+          "parser_reused_for_all_frames": true,
+          "publications": [
+            {
+              "fields": {
+                "alt": 23.45599937438965,
+                "gps2Status": 5.0,
+                "gps2Vis": 19.0,
+                "gps2Yaw": 23456.0,
+                "gpsStatus": 0.0,
+                "gpsVis": 0.0,
+                "gpsYaw": 0.0,
+                "gps_time": 0.0,
+                "hdg": 23456.0,
+                "lat": 43.12345504760742,
+                "lon": -72.23456573486328,
+                "pc_time": "2026-10-15 12:00:00 UTC",
+                "pitch": -0.5,
+                "pix_id": 17,
+                "roll": 0.25,
+                "yaw": 0.75
+              },
+              "payload_length": 78,
+              "payload_sha256": "5593d2040cfbc1750e33caef8a9f7bd786759692e648f16eca0d4dfa8b27b5a9",
+              "topic": "/topic/PIXHAWK_DATA_17"
+            }
+          ],
+          "semantics": "Bad CRC raises real decoder MAVError; the same complete-frame parser continues, manager catches the error and later publishes remaining components with missing primary defaults. Fragmentation and mavutil auto-negotiation are excluded.",
+          "wire_inputs": [
+            {
+              "arrival_monotonic": 700248.458198709,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 1,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            },
+            {
+              "arrival_monotonic": 700248.45831995,
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 2,
+              "label": "gps_raw_int-bad-crc",
+              "parse_error": "MAVError",
+              "wire_length": 64,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "b680409e9432c466ba8801a20339b10cb07037215d157d13e77c343dac188059"
+            },
+            {
+              "arrival_monotonic": 700248.459447283,
+              "decoded_fields": {
+                "alt": 54321,
+                "alt_ellipsoid": 0,
+                "cog": 410,
+                "dgps_age": 20,
+                "dgps_numch": 3,
+                "eph": 110,
+                "epv": 210,
+                "fix_type": 5,
+                "h_acc": 0,
+                "hdg_acc": 0,
+                "lat": 331234567,
+                "lon": -812345678,
+                "satellites_visible": 19,
+                "time_usec": 12001000,
+                "v_acc": 0,
+                "vel": 310,
+                "vel_acc": 0,
+                "yaw": 23456
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 3,
+              "label": "gps2_raw",
+              "message_type": "GPS2_RAW",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_usec": 12001000
+              },
+              "wire_length": 49,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "80881468435d1dade058d36dae09b2fffbc5851e16eabadbad61a1b901a94786"
+            },
+            {
+              "arrival_monotonic": 700248.459507376,
+              "decoded_fields": {
+                "alt": 23456,
+                "hdg": 23456,
+                "lat": 431234567,
+                "lon": -722345678,
+                "relative_alt": 4567,
+                "time_boot_ms": 12002,
+                "vx": 10,
+                "vy": 20,
+                "vz": 30
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 4,
+              "label": "global_position_int",
+              "message_type": "GLOBAL_POSITION_INT",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12002
+              },
+              "wire_length": 40,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "463be80ae178cc2f6d2ba2bbfdf00696baf9f3e425ee60677e92b1611937368f"
+            },
+            {
+              "arrival_monotonic": 700248.460612691,
+              "decoded_fields": {
+                "pitch": -0.5,
+                "pitchspeed": 0.0,
+                "roll": 0.25,
+                "rollspeed": 0.0,
+                "time_boot_ms": 12000,
+                "yaw": 0.75,
+                "yawspeed": 0.0
+              },
+              "decoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "decoder_protocol": "2.0",
+              "encoder_dialect": "pymavlink.dialects.v20.ardupilotmega",
+              "index": 5,
+              "label": "attitude",
+              "message_type": "ATTITUDE",
+              "sequence": 0,
+              "source_component": 1,
+              "source_system": 42,
+              "source_timestamps": {
+                "time_boot_ms": 12000
+              },
+              "wire_length": 28,
+              "wire_magic": 253,
+              "wire_protocol": "2.0",
+              "wire_sha256": "1cc9e08dd3629cd2c8c937d09c787fb6d9288bde38c0736feb1b5332699b7c13"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "name": "strict_callback_negatives",
+        "observations": {
+          "negative_callback_results": [
+            {
+              "label": "truncated-protobuf",
+              "rejected_messages": 1,
+              "selected_state_empty": true
+            },
+            {
+              "label": "wrong-manager-id",
+              "rejected_messages": 2,
+              "selected_state_empty": true
+            },
+            {
+              "label": "oversized-body",
+              "rejected_messages": 3,
+              "selected_state_empty": true
+            },
+            {
+              "label": "nonexact-bytes",
+              "rejected_messages": 4,
+              "selected_state_empty": true
+            },
+            {
+              "label": "invalid-time",
+              "rejected_messages": 5,
+              "selected_state_empty": true
+            },
+            {
+              "label": "non-utc-time",
+              "rejected_messages": 6,
+              "selected_state_empty": true
+            },
+            {
+              "label": "oversized-time",
+              "rejected_messages": 7,
+              "selected_state_empty": true
+            },
+            {
+              "label": "nonfinite-field",
+              "rejected_messages": 8,
+              "selected_state_empty": true
+            },
+            {
+              "label": "wrong-identifier",
+              "rejected_messages": 9,
+              "selected_state_empty": true
+            }
+          ],
+          "negative_count": 9,
+          "semantics": "Actual strict callback rejects malformed, wrong-ID, oversized, wrong-type, invalid-time, nonfinite and wrong-identifier inputs; valid data remains usable afterward.",
+          "valid_after_negatives": {
+            "alt": 0.0,
+            "gps2Status": 0.0,
+            "gps2Vis": 0.0,
+            "gps2Yaw": 0.0,
+            "gpsStatus": 0.0,
+            "gpsVis": 0.0,
+            "gpsYaw": 0.0,
+            "gps_time": 0.0,
+            "hdg": 0.0,
+            "lat": 0.0,
+            "lon": 0.0,
+            "pc_time": "2026-10-15T12:00:00+00:00",
+            "pitch": 0.0,
+            "pix_id": 17,
+            "roll": 0.25,
+            "yaw": 0.0
+          }
+        },
+        "status": "PASS"
+      }
+    ],
+    "failed": 0,
+    "fixture_manager_id": 17,
+    "mavlink_write_attempts": 0,
+    "module_origins": {
+      "manager": "/home/admin/satgs-pi-test/satgs-app-manager/lib/python3.11/site-packages/pixhawk/pixhawk_manager.py",
+      "mavlink_v10": "/home/admin/satgs-pi-test/satgs-app-manager/lib/python3.11/site-packages/pymavlink/dialects/v10/ardupilotmega.py",
+      "mavlink_v20": "/home/admin/satgs-pi-test/satgs-app-manager/lib/python3.11/site-packages/pymavlink/dialects/v20/ardupilotmega.py",
+      "protobuf": "/home/admin/satgs-pi-test/satgs-app-manager/lib/python3.11/site-packages/pixhawk/pixhawk_pb2.py",
+      "subscriber": "/home/admin/satgs-pi-test/satgs-app-manager/lib/python3.11/site-packages/pixhawk/pixhawk_subscriber.py"
+    },
+    "passed": 16,
+    "protobuf_fields": [
+      "pc_time",
+      "gps_time",
+      "roll",
+      "pitch",
+      "yaw",
+      "gpsStatus",
+      "gpsVis",
+      "gpsYaw",
+      "lat",
+      "lon",
+      "alt",
+      "hdg",
+      "gps2Status",
+      "gps2Vis",
+      "gps2Yaw",
+      "pix_id"
+    ],
+    "scenario_count": 16,
+    "scope": "Offline installed handler, fixed-dialect complete-frame MAVLink decoding, protobuf and strict callback characterization only. No mavutil protocol auto-negotiation, fragmented-stream qualification, manager/subscriber/transport construction, broker, device, manager lifecycle, navigation admission or firmware qualification.",
+    "status": "PASS"
+  },
+  "verified_checker": null,
+  "wall_clock_synchronized": "unconfirmed"
+}

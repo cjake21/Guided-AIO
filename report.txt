@@ -1,0 +1,28 @@
+Pixhawk offline handler check: PASS
+Selected application: /home/admin/satgs-pi-test/satgs-app-manager
+Support: /home/admin/Downloads/pixhawk-offline-check-20261015-v1
+Attempt: /home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k
+Wall-clock synchronization: UNCONFIRMED
+Elapsed seconds (monotonic): 37.824
+inputs: PASS; child exit=NOT RUN; 
+binding: PASS; child exit=NOT RUN; 
+admission: PASS; child exit=0; 
+check: PASS; child exit=0; 
+Primary: null
+Cleanup: {"admission": {"errors": [], "exception": null, "quiescent": true, "residual": false, "timeout": false}, "check": {"errors": [], "exception": null, "quiescent": true, "residual": false, "timeout": false}}
+Capture errors: []
+Packaging: {"excludes": "final report.txt and summary.json describe packaging after archive verification", "files": 26, "path": "/home/admin/satgs-pi-test/pixhawk-handler-run-a0l3x86k/evidence.tar.gz", "sha256": "9caabda5687291150cfb1fdc577af85b27d83ba1701af34972c8c1bcb4a40b16", "status": "PASS", "uncompressed_bytes": 2578594}
+Verified offline scenarios: 16 passed / 16; MAVLink write attempts: 0
+The offline check is designed to exercise installed manager handling, generated MAVLink/protobuf and strict callbacks with in-memory boundaries.
+Fixed parser dialect and complete frames only; no mavutil auto-negotiation or fragmented-stream qualification.
+No application manager/subscriber constructor, service, broker, device or live route is launched.
+Callback acceptance and scenario PASS do not establish sensor presence, source authentication, freshness or navigation validity.
+Host results do not qualify this target. This attempt reports its own bound target result only.
+Trusted native opt-in covers reviewed bound native imports, not syscall isolation or arbitrary FFI.
+The old installed checker is not rerun; bundled references remain binding/provenance inputs only.
+A future live test needs separate exact Cube interface approval; serial opening can use O_RDWR, termios, RTS/DTR and input flush.
+No TX is authorized here, and an intended no-TX live test would not remove those opening effects.
+Do not bypass failed controls by reinstalling, chmod, removing hooks or running unguarded checks.
+Attach report.txt and verified evidence.tar.gz when packaging passed.
+Complete recording requires completion.json matching report/summary and launcher exit 0 for PASS.
+No complete capture guarantee applies to SIGKILL, power loss or failed writes.
