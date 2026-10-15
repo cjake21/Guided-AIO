@@ -1,0 +1,29 @@
+Pixhawk bounded live-input check: PASS
+Selected application: /home/admin/satgs-pi-test/satgs-app-manager
+Support: /home/admin/Downloads/pixhawk-live-check-20261015-v1
+Attempt: /home/admin/satgs-pi-test/pixhawk-live-run-oo7txxut
+Wall-clock synchronization: UNCONFIRMED
+Elapsed seconds (monotonic): 100.021
+inputs: PASS; child exit=NOT RUN; 
+binding: PASS; child exit=NOT RUN; 
+admission: PASS; child exit=0; 
+check: PASS; child exit=0; 
+Primary: null
+Cleanup: {"admission": {"errors": [], "exception": null, "quiescent": true, "residual": false, "timeout": false}, "check": {"errors": [], "exception": null, "quiescent": true, "residual": false, "timeout": false}}
+Capture errors: []
+Packaging: {"excludes": "final report.txt and summary.json describe packaging after archive verification", "files": 26, "path": "/home/admin/satgs-pi-test/pixhawk-live-run-oo7txxut/evidence.tar.gz", "sha256": "0c9531f6d090ab6777311d9821601e247dfd4dfb5b7b56723c02f2c55ab065f1", "status": "PASS", "uncompressed_bytes": 2971681}
+Observed messages: 1564; accepted publications: 63; write attempts: 0; stop: duration-limit
+Device-free admission runs 16 accepted handler cases and 21 live-support controls.
+Live input feeds installed mavutil receive parsing, actual manager handling, protobuf and strict callbacks.
+No application manager/subscriber constructor, service, broker, stream request or payload write is launched.
+Callback acceptance does not establish valid fix, calibrated heading, source authentication, freshness or navigation validity.
+Host results do not qualify this target. This attempt reports its own bound target result only.
+Trusted native opt-in covers reviewed bound native imports, not syscall isolation or arbitrary FFI.
+The old installed checker is not rerun; bundled references remain binding/provenance inputs only.
+The exact Cube interface 00 opens O_RDONLY once. No termios changes or explicit DTR/RTS operations are permitted.
+Operator acknowledgement establishes no prior reader; TIOCEXCL restricts later nonprivileged opens only.
+TTY open/close and USB control effects remain possible. Zero physical USB TX is not claimed.
+Do not bypass failed controls by reinstalling, chmod, removing hooks or running unguarded checks.
+Attach report.txt and verified evidence.tar.gz when packaging passed.
+Complete recording requires completion.json matching report/summary and launcher exit 0 for PASS.
+No complete capture guarantee applies to SIGKILL, power loss or failed writes.
