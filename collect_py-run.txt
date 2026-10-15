@@ -1,0 +1,23 @@
+admin@guided-arrow-aio-01:~ $ cd Downloads/
+admin@guided-arrow-aio-01:~/Downloads $ ls
+check-support-offline-20261014-v2  collect_pi_startup.py  pi-installed-check-offline-20261014-v2.tar.gz
+admin@guided-arrow-aio-01:~/Downloads $ mv collect_pi_startup.py check-support-offline-20261014-v2/
+admin@guided-arrow-aio-01:~/Downloads $ cd check-support-offline-20261014-v2/
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ ls
+collect_pi_startup.py  export-provenance.json  pi_guard.py  pi_target.py  README.md  reference  run_pi_checks.py  run_pi_checks.sh  SHA256SUMS
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ env -i PATH=/usr/bin:/bin LC_ALL=C /usr/bin/python3.11 -I -B -S ./collect_pi_startup.py
+DIAGNOSTIC ONLY. Application checks were not run.
+Report: /home/admin/satgs-pi-test/startup-inspection-yjwdqyus/report.txt
+Evidence: /home/admin/satgs-pi-test/startup-inspection-yjwdqyus/evidence.tar.gz
+SHA-256: 45a92101c622b3f32b3d44600295585807c293b7628f1e55cd654aaa39f87012
+Unresolved observations: 0
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ cat /home/admin/satgs-pi-test/startup-inspection-yjwdqyus/report.txt
+Startup collection: DIAGNOSTIC ONLY
+Installed application: NOT RUN
+Hook and cache code: NOT EXECUTED
+Observations: 109; unresolved: 0
+Actual site startup and loader reachability still require review.
+No hook is admitted by this report. Existing files/environments were not changed.
+Trust: isolated CPython/stdlib and read-only dpkg-query; not syscall isolation.
+Attach report.txt, summary.json and evidence.tar.gz. Preserve unresolved observations.
+admin@guided-arrow-aio-01:~/Downloads/check-support-offline-20261014-v2 $ 
