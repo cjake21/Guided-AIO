@@ -1,0 +1,40 @@
+import json
+from datetime import datetime
+
+# Approved conduits (would normally live in git)
+APPROVED = {
+    ("10.1.2.10", "10.1.1.5", "EtherNet/IP"),   # HMI -> PLC
+    ("10.1.2.20", "10.1.1.5", "EtherNet/IP"),   # Eng WS -> PLC
+    ("10.1.2.30", "10.2.1.10", "HTTPS"),        # Local historian -> DMZ replica
+}
+
+def load_observed_flows(log_path):
+    """Pretend this reads Zeek conn.log or firewall logs.
+    Returns set of (src, dst, service) tuples.
+    """
+    # Simplified example data
+    return {
+        ("10.1.2.10", "10.1.1.5", "EtherNet/IP"),
+        ("10.1.2.50", "10.1.1.5", "Modbus"),      # unexpected
+        ("10.1.2.20", "10.1.1.8", "EtherNet/IP"), # unexpected dest
+    }
+
+def check_drift(observed):
+    alerts = []
+    for flow in observed:
+        if flow not in APPROVED:
+            alerts.append({
+                "time": datetime.utcnow().isoformat(),
+                "src": flow[0],
+                "dst": flow[1],
+                "service": flow[2],
+                "msg": "Unexpected conduit"
+            })
+    return alerts
+
+if __name__ == "__main__":
+    observed = load_observed_flows("conn.log")
+    alerts = check_drift(observed)
+    for alert in alerts:
+        print(json.dumps(alert))
+    # In real life: send to SIEM, Slack, or ticket system
