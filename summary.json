@@ -1,0 +1,66 @@
+{
+  "application": "/home/admin/satgs-operator-20261105-r4-app-client",
+  "capture_errors": [],
+  "cleanup": {
+    "children": [],
+    "status": "NOT RUN"
+  },
+  "duration_seconds": 0.2611839626915753,
+  "launcher": {
+    "exit_to_return": 1,
+    "observed_runner_exit": null
+  },
+  "packaging": {
+    "files": 2,
+    "hashes_diagnostic_only": true,
+    "path": "/home/admin/satgs-operator-20261105-r4-setup/operator-setup-5s4x2dfl/evidence.tar.gz",
+    "sha256": "b34b01655bd83eea76a8efb4d0a3f4a3daba00cb4cbfae9b88e31cee5ed2f226",
+    "status": "PASS",
+    "uncompressed_bytes": 2105
+  },
+  "phases": {
+    "check": {
+      "status": "NOT RUN"
+    },
+    "create": {
+      "status": "NOT RUN"
+    },
+    "install": {
+      "status": "NOT RUN"
+    },
+    "metadata": {
+      "status": "NOT RUN"
+    }
+  },
+  "primary": {
+    "message": "[Errno 2] No such file or directory: '/home/admin/satgs-operator-20261028-r3/manifest.json'",
+    "phase": null,
+    "type": "FileNotFoundError"
+  },
+  "provenance": {
+    "additional_warnings": 0,
+    "historical_byte_identity": "NOT ESTABLISHED by this functional run",
+    "policy": "Digest differences and missing optional checksums do not change functional status or exit.",
+    "status": "WARN",
+    "warning_count": 1,
+    "warnings": [
+      {
+        "blocking": false,
+        "expected": null,
+        "observed": null,
+        "path": "/home/admin/Downloads/satgs-operator-r4-checks-20261110/SHA256SUMS",
+        "reason": "optional checksum inventory absent",
+        "role": "provenance only; not functional acceptance"
+      }
+    ]
+  },
+  "recording": {
+    "report_sha256": "657440bfe553ce088e2eb77aa4e8bdab09989c38119913fc4e5890306346c9b4",
+    "status": "PASS"
+  },
+  "schema": "operator-side-by-side-setup.v1",
+  "signals": [],
+  "source": "/home/admin/satgs-operator-20261028-r3",
+  "status": "FAIL",
+  "support": "/home/admin/Downloads/satgs-operator-r4-checks-20261110/check-support"
+}
