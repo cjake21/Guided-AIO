@@ -1,0 +1,9 @@
+{
+  "hashes_diagnostic_only": true,
+  "launcher_exit_to_return": 78,
+  "observed_runner_exit": null,
+  "outer_exit_observation": "selected runner OS exit observed by outer launcher; outer return decision recorded",
+  "report_sha256": "fb7a09af9c6c5c35f1938c14fea76ca23491b57248dc3fd428265197e3c4e28b",
+  "status": "BLOCKED",
+  "summary_sha256": "6b2c4794c0716188512ac29642178d7c3a79e78bc852d3aee39173a3b17773ed"
+}

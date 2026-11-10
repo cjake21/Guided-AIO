@@ -1,0 +1,78 @@
+{
+  "application": "/home/admin/satgs-operator-20261105-r4-app-client",
+  "capture_errors": [],
+  "cleanup": {
+    "status": "NOT RUN"
+  },
+  "duration_seconds": 0.006424278020858765,
+  "launcher": {
+    "exit_to_return": 78,
+    "observed_runner_exit": null,
+    "scope": "actual supervised acceptance process exit; outer launcher return decision follows recording",
+    "supervision": null
+  },
+  "native_selection": {},
+  "packaging": {
+    "excludes": "final report/summary/completion bind the verified archive after packaging",
+    "files": 2,
+    "path": "/home/admin/satgs-operator-20261105-r4-acceptance/operator-acceptance-9o1l5qdb/evidence.tar.gz",
+    "sha256": "9bb7d7697808e361b7472a5cf1efde9a3d16a6ade1d2b9876565d8f4c4400c7d",
+    "status": "PASS",
+    "uncompressed_bytes": 1200
+  },
+  "phases": {
+    "cli-examples": {
+      "status": "NOT RUN"
+    },
+    "core-cli": {
+      "status": "NOT RUN"
+    },
+    "installed": {
+      "status": "NOT RUN"
+    },
+    "native-widgets": {
+      "status": "NOT RUN"
+    },
+    "planning": {
+      "status": "NOT RUN"
+    },
+    "presenter": {
+      "status": "NOT RUN"
+    },
+    "regression": {
+      "status": "NOT RUN"
+    },
+    "static": {
+      "status": "NOT RUN"
+    }
+  },
+  "primary": {
+    "message": "[Errno 2] No such file or directory: '/home/admin/satgs-operator-20261105-r4-app-client/pyvenv.cfg'",
+    "type": "FileNotFoundError"
+  },
+  "provenance": {
+    "additional_warnings": 0,
+    "historical_byte_identity": "NOT ESTABLISHED by this functional run",
+    "policy": "Digest differences and missing optional checksums do not change functional status or exit.",
+    "status": "WARN",
+    "warning_count": 1,
+    "warnings": [
+      {
+        "blocking": false,
+        "expected": null,
+        "observed": null,
+        "path": "/home/admin/Downloads/satgs-operator-r4-checks-20261110/check-support/SHA256SUMS",
+        "reason": "optional checksum inventory absent",
+        "role": "provenance only; not functional acceptance"
+      }
+    ]
+  },
+  "recording": {
+    "report_sha256": "fb7a09af9c6c5c35f1938c14fea76ca23491b57248dc3fd428265197e3c4e28b",
+    "status": "PASS"
+  },
+  "schema": "operator-consolidated-acceptance.v2",
+  "signals": [],
+  "source": "/home/admin/Downloads/satgs-operator-r4-checks-20261110/check-support/reference/ground_station",
+  "status": "BLOCKED"
+}
