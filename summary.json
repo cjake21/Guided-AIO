@@ -1,0 +1,66 @@
+{
+  "application": "/home/admin/satgs-native-ui-20261111-app-manager",
+  "capture_errors": [],
+  "cleanup": {
+    "children": [],
+    "status": "NOT RUN"
+  },
+  "duration_seconds": 0.25356005504727364,
+  "launcher": {
+    "exit_to_return": 1,
+    "observed_runner_exit": null
+  },
+  "packaging": {
+    "files": 2,
+    "hashes_diagnostic_only": true,
+    "path": "/home/admin/satgs-native-ui-20261111-setup/operator-setup-urf6ctse/evidence.tar.gz",
+    "sha256": "c8c7b0d287f2277989afb9627844aca6b618ea15c7829e09f1ef926ab0e5fe8a",
+    "status": "PASS",
+    "uncompressed_bytes": 2071
+  },
+  "phases": {
+    "check": {
+      "status": "NOT RUN"
+    },
+    "create": {
+      "status": "NOT RUN"
+    },
+    "install": {
+      "status": "NOT RUN"
+    },
+    "metadata": {
+      "status": "NOT RUN"
+    }
+  },
+  "primary": {
+    "message": "reviewed startup executable path changed",
+    "phase": null,
+    "type": "RuntimeError"
+  },
+  "provenance": {
+    "additional_warnings": 0,
+    "historical_byte_identity": "NOT ESTABLISHED by this functional run",
+    "policy": "Digest differences and missing optional checksums do not change functional status or exit.",
+    "status": "WARN",
+    "warning_count": 1,
+    "warnings": [
+      {
+        "blocking": false,
+        "expected": null,
+        "observed": null,
+        "path": "/home/admin/Downloads/satgs-native-ui-20261111/SHA256SUMS",
+        "reason": "optional checksum inventory absent",
+        "role": "provenance only; not functional acceptance"
+      }
+    ]
+  },
+  "recording": {
+    "report_sha256": "fdff11a13d1c8b28d18e60707b2ecba3e512c6b382c63bb4480163e3b57b762d",
+    "status": "PASS"
+  },
+  "schema": "operator-side-by-side-setup.v1",
+  "signals": [],
+  "source": "/home/admin/satgs-operator-20261028-r3/satgs-operator-pi-arm64-7e7ffdf26e4f-20261028-r3",
+  "status": "FAIL",
+  "support": "/home/admin/Downloads/satgs-native-ui-20261111/check-support"
+}

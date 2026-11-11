@@ -1,0 +1,15 @@
+SATGS side-by-side setup: FAIL
+Application: /home/admin/satgs-native-ui-20261111-app-manager
+Retained bundle: /home/admin/satgs-operator-20261028-r3/satgs-operator-pi-arm64-7e7ffdf26e4f-20261028-r3
+create: NOT RUN
+install: NOT RUN
+check: NOT RUN
+metadata: NOT RUN
+Primary: {"message": "reviewed startup executable path changed", "phase": null, "type": "RuntimeError"}
+Cleanup: {"children": [], "status": "NOT RUN"}
+Packaging: {"files": 2, "hashes_diagnostic_only": true, "path": "/home/admin/satgs-native-ui-20261111-setup/operator-setup-urf6ctse/evidence.tar.gz", "sha256": "c8c7b0d287f2277989afb9627844aca6b618ea15c7829e09f1ef926ab0e5fe8a", "status": "PASS", "uncompressed_bytes": 2071}
+Provenance: {"additional_warnings": 0, "historical_byte_identity": "NOT ESTABLISHED by this functional run", "policy": "Digest differences and missing optional checksums do not change functional status or exit.", "status": "WARN", "warning_count": 1, "warnings": [{"blocking": false, "expected": null, "observed": null, "path": "/home/admin/Downloads/satgs-native-ui-20261111/SHA256SUMS", "reason": "optional checksum inventory absent", "role": "provenance only; not functional acceptance"}]}
+Existing application, workspaces and diagnostic environments were not selected for writes.
+Partial new environments are retained. No overwrite, rollback or deletion was attempted.
+This installs packages only. GUI/CLI acceptance and Pi Tcl observations remain separate.
+Python API/audit controls trust the selected CPython/stdlib; they are not syscall isolation.
