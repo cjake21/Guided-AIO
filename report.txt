@@ -1,6 +1,0 @@
-SATGS inventory only
-Status: incomplete
-No inspected files changed. Proposed reclaimable bytes: 0.
-Archive candidates: none. Writer state and retention remain unknown.
-See inventory.json for exact paths, sizes, protections and unknown observations.
-evidence.tar.gz contains generated reports only, not original evidence.
