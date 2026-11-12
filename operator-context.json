@@ -1,0 +1,15 @@
+{
+  "authentication_contents": "not read or archived by the launcher",
+  "operator_display_environment": {
+    "DISPLAY": ":0",
+    "HOME": "/home/admin",
+    "XAUTHORITY": "/home/admin/.Xauthority",
+    "XDG_SESSION_TYPE": "wayland"
+  },
+  "operator_reported_prior_smoke": "Cole reports r3 GUI opened/clicked and CLI ran without observed errors; not automated acceptance",
+  "outer_interpreter": "/usr/bin/python3.11",
+  "owned_host_display_fixture": false,
+  "schema": "operator-launch-context.v1",
+  "selected_application": "/home/admin/satgs-user-guide-20261112-app-manager",
+  "start_utc": "2026-11-12T14:14:46.562743+00:00"
+}
