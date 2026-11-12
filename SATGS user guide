@@ -1,0 +1,498 @@
+SATGS user guide
+
+Offline operator reference
+
+Application version 0.0.1+guide.20261112.1
+
+    Operator guide
+    Practice without hardware
+    CLI reference
+    Original and current workflows
+    Maintainer reference
+
+Operator guide
+
+SATGS provides a native station window and the satgs-operator terminal command. Both read the same saved workspace. Use the window for routine configuration and review, and the CLI when you need repeatable inputs, full identifiers or SSH access. The optional browser dashboard is a different application.
+Daily quickstart
+
+If the accepted daily application is already selected, leave the selection alone. Selection chooses an installed application; it does not open a window, choose hardware or select a telemetry source. After a separately reviewed update, source that update's launchers/setup_daily.sh with its documented selection name. The accepted native release uses --select ui; this guide candidate uses --select guide. Do not select a candidate after failed acceptance.
+
+On the station's local or remote desktop, open the application menu and click SATGS. The desktop entry declares the Science category. Desktop menus may group that category differently; the precise Pi submenu still needs a direct menu-click observation. In a desktop terminal, the short alternative is:
+
+satgs-operator-gui
+
+No environment activation or versioned installation directory is needed. Inspect the existing station before changing it:
+
+satgs-operator status
+satgs-operator docs
+
+The daily launcher resolves its saved workspace, normally /home/admin/satgs/station, from the shared selection. A missing station causes an error, not automatic initialization. For the following practice actions, create a separate station using the hands-on tutorial. Never initialize the daily station merely to replace unknown status fields.
+
+In the practice window, use these steps:
+
+    On Home, inspect Status, then use Reload (Ctrl+R) after another interface saves.
+    On Setup, choose guided_arrow, click Preview, review the proposed selection, then click Save. This saves planning intent, not an installation or connection.
+    On Location, enter the tutorial's synthetic decimal-degree coordinates and altitude in metres. Preview opens Review. Cancel (Esc) discards that preview; Preview again and Save records the values.
+    Close and reopen the same practice workspace. Its saved selection remains.
+    On Results, provide the tutorial's local historical TLE CSV and UTC start, then click Calculate. Read the opportunities and Report. A calculation is not a tracking run.
+    Use only the separately supplied controlled rehearsal procedure when a software run is needed. Selecting rehearsal on Run does not admit owners. The rehearsal section explains the supported boundary.
+    On Results, choose a new report filename and use Export.... Keep the report and workspace. A second export to the same filename fails without replacing it.
+
+Sourced setup changes PATH in that terminal only. A new terminal must find its own command. If needed, use ~/.local/bin/satgs-operator status or ~/.local/bin/satgs-operator-gui; these are the installed daily wrappers, not new aliases. The application menu uses an absolute wrapper path. Shell profiles and global PATH are not changed.
+
+From an SSH-only session, use satgs-operator docs --text and the CLI. A forwarded or unrelated display is not permission to open another desktop session. Do not force DISPLAY=:0. A remote desktop attached to your ordinary graphical login can use the menu just like the local desktop.
+Open this guide
+
+satgs-operator docs
+satgs-operator --read-docs
+satgs-operator docs --text
+
+The first two commands use the same dispatcher. On a usable desktop they send this installed release's local HTML guide to the default viewer. Successful dispatch does not prove that a window rendered. In SSH/headless sessions, or when the viewer is unavailable, fails or times out, readable terminal text is provided instead. --text always prints without a display, Tk, browser or pager. The native window's Help > User Guide opens this same guide and retains edits.
+
+Documentation works before station creation and with missing or invalid station configuration. It does not connect owners, read credentials, start services or change the daily selection. All chapters are bundled offline with the selected release. There is no hosted site, localhost server or source-checkout fallback.
+Installation, configuration and observations
+
+Three different questions appear in normal station use. Installation asks which software is present. Configuration records intended components and station values. Observation records what a source actually reported and when. Saving a profile answers the second question only. It does not make the first or third healthy.
+Displayed state 	What it means 	Appropriate next action
+Selection: No data	No component selection is saved in this workspace.	Inspect the intended deployment, then Preview and Save a supported selection if a change is needed.
+No location set.	No effective saved station coordinates are selected.	Enter a deliberate manual position in a practice workspace first; do not infer one from a screenshot or device label.
+unknown	This workspace has no evidence establishing that dimension. Installation status is intentionally unknown even when package metadata exists.	Inspect the source and assigned validation record. Unknown is not proof of missing hardware or missing packages.
+unqualified calibration or heading	The interface has no admitted qualification for calibration or antenna heading.	Use the separate approved alignment/qualification procedure. Coordinates do not establish alignment.
+unconfigured	No canonical component selection is saved.	Choose a supported configuration when authorized.
+selected_local	Configuration intent is saved locally.	Review its constraints. This does not establish owner readiness.
+critical with transport_pass	A synthetic observation can report critical health while message transport passes.	Keep the dimensions separate; receiving a message does not establish navigation or physical health.
+
+Generation is the saved configuration's sequence, not a count of messages or an installation result. A newly created station starts at generation 1. The observed generation 1 and unconfigured/unknown fields therefore do not overturn a separately reported acceptance PASS.
+
+Home exposes connection, message receipt, fix, freshness, system health, transport check, calibration, heading, installation and configuration separately. The CLI's --format json retains source identities and diagnostic detail omitted from everyday human views. Report/export retain provenance rather than turning unavailable evidence into success.
+Choose a configuration
+
+Setup's Profile offers full_msel, guided_arrow and custom. The PTU model in this physical pelican-qpt130 case is QPT130 only. The wider shared product keeps its existing Full M-SEL model contracts, including QPT-200 and QPT-500. This case's power/bench applicability does not remove those wider models.
+
+full_msel describes the established full suite. guided_arrow describes its canonical modular foundation, with explicit local and external responsibilities. custom edits canonical component modes and providers. Modes are install, reuse, external and omit; these are planning choices, not actions that the native window performs. An external provider still needs its independently configured service, identity and contract.
+
+Click Preview to inspect the exact proposed selection and affected plans. Save confirms only that preview. Cancel (Esc) leaves saved configuration unchanged. Full M-SEL's optional local hardware does not declare stable instances. Switching that selection to Custom can therefore produce an unapplied draft with missing identity diagnostics and Save disabled. The displayed intent is retained. Start from Guided Arrow's declared instances, deliberately change selection modes, or provide complete canonical JSON through components-preview --changes. Do not invent hardware identities to silence a diagnostic.
+
+The native application has no installer or service-activation button. The separate deployment planner and legacy Full M-SEL installer are described in the comparison.
+
+Actual SATGS Setup page showing guided_arrow profile, QPT130 model, canonical component choices and Preview
+
+This is the actual accepted native UI 0.0.1+ui.20261111.1 Setup page on a controlled host display. It is not a Pi screenshot or a test of the new guide Help action. The guide candidate adds Help > User Guide; that new menu is absent from this earlier image. The component choices and Preview workflow shown here remain the relevant controls.
+Position and antenna alignment
+
+Location accepts latitude from -90 to 90 degrees and longitude from -180 to 180 degrees. North and east are positive; south and west are negative. Altitude is metres. Inputs must be finite; the shared location value does not impose a separate numerical altitude bound. A manual position describes the stationary site used for planning. It is not a measured GPS fix, antenna heading, calibration, no-go policy or physical pointing result.
+
+Altitude reference is either unspecified or an operator-declared mean_sea_level. Selecting mean sea level does not perform a datum conversion, survey or geoid correction. Runtime manual-location binding requires the supported declared reference and exact saved revision in addition to all owner admission checks. An unspecified-reference plan is still a numerical planning result, not an admitted execution input.
+
+The GPS panel keeps measured/replay coordinates separate from manual and effective station coordinates. Use GPS is disabled. Its missing contract covers source identity, fix validity, observation time/freshness and horizontal/altitude references. A reported 3D fix is not sufficient to select it. fresh_replay describes a fixture, not today's live timestamp. The fixed replay observation time is retained in structured output. Incomplete aggregates do not acquire manufactured coordinates or a fabricated final unpublished observation.
+Review, save, reload and conflicts
+
+Preview writes a review artifact without changing station settings. Save applies the reviewed revision atomically and records a receipt. Repeating a completed apply returns the same receipt without another generation change. Repeating cancel is also safe. A cancelled preview cannot later apply; make a new preview.
+
+Another saved change or an active managed runner can make a preview conflict. Reload and review again. There is no force override. Station changes mark old plans for revalidation; calculate a new plan before making a new run request. Cancellation is not rollback of a saved change.
+
+A save can complete before its receipt or final durability record fails. The interface reports a partial failure and retains the real saved state. Reload before recovery. If that operation is still current, repeating its apply can recover the receipt without changing coordinates twice. Keep partial artifacts; do not blindly repeat an operation whose physical outcome is uncertain.
+Calculate and interpret results
+
+Results uses Start (UTC ISO 8601), NORAD ID, Span (days), Minimum elevation (deg) and Local TLE CSV. UTC input must include an explicit offset, such as 2025-05-16T03:00:00Z; an offset is normalized to UTC. The span is one hour through seven days. Elevation is 0 through 90 degrees. At most 256 opportunities are retained.
+
+The default is historical NOAA 15 data with NORAD ID 25338 and a May 2025 start, not a current orbit. Supplying a local CSV makes its source explicit and leaves the file unchanged. SATGS validates the selected identity, CSV fields, TLE lines and checksums. It does not fetch or refresh TLEs in this path. Use current approved local inputs for actual planning and assess freshness separately.
+
+An opportunity contains rise/set times, azimuths, maximum elevation and whether it is circumpolar. Its plan binds the saved station revision, position, altitude reference and exact TLE input. An empty opportunity list means none were found for those inputs, not that the receiver or PTU failed. A circumpolar entry can omit rise/set fields. Report displays retained plans and operation results.
+
+Export... writes a new private JSON report. Use a new filename in an existing private directory. It never overwrites an existing report. This export is not an RF recording, legacy run directory, database insert or Box upload.
+Run and PTU controls
+
+Run offers Plan, Configuration JSON, Runtime bindings JSON, Owner settings, Local TLE CSV, Duration (seconds), Opportunity (1-based) and Execution mode. Review run freezes those inputs with the saved position and revision. Start run is a separate confirmation. These fields are not templates for guessing device or broker identities. Ordinary production owner admission remains empty, so normal live execution is unavailable in this release.
+
+The implemented controlled rehearsal uses real software owners with deliberately controlled transport/serial boundaries and a disposable station. It is not a public bypass for run-start. Software completion, submission history, manager outcome and physical state remain separate. Exit 8 means physical state is indeterminate even when a software operation completed.
+
+Cancel run requests local cancellation of a started run. A request or saved progress record does not prove a currently running process, remote cancellation or physical Stop. run-status before a run starts reports not_started. Cancelling a configuration preview is a different operation from cancelling a run.
+
+PTU has Configuration JSON, Connect, Status, Disconnect, target pan/tilt in degrees, Preview and Move. Stop is also visible in the footer. Live bench admission is closed pending the allocated unit's current-position/Stop contract and reviewed setup binding. These controls do not become available by changing a mode label. Opening the page, connecting or editing numbers never requests a move. Protocol-reported position is not measured arrival; acknowledgements, passive disconnect and local cancellation do not establish physical stopping.
+Capability and service boundaries
+Capability 	Release status 	Boundary
+Shared configuration, manual preview/save/cancel/reload, local numerical planning and report export	Delivered implementation with hardware-free host/regression coverage; prior native UI has reported Pi acceptance	Candidate-specific installed/target evidence accompanies its acceptance report. Do not transfer old PASS to changed bytes.
+CLI docs, alias, text fallback and GUI Help	Implemented in this guide candidate	The candidate acceptance report records which installed and target checks actually ran. Viewer dispatch is not rendered-window evidence.
+Revision-bound run requests and controlled owner rehearsal	Implemented; controlled software tests are separate from target/live qualification	Production admission and physical pointing remain unavailable.
+Full M-SEL queue/RF/logging, optional dashboard and Box workflow	Preserved legacy-only paths	Not replaced by Calculate, Report or Export.... They require their own approved full deployment.
+Live GPS station selection, live QPT control, physical Stop/arrival and navigation/heading qualification	Unavailable pending separately reviewed work	No force flag, mode edit or documentation command enables them.
+Database history and remote storage in the native application	No implemented native workflow	Do not infer installation, credentials, synchronization or successful uploads.
+
+Local ActiveMQ, databases and Box are independently provisioned optional responsibilities. The native application does not install, activate or contact them on opening, status inspection or reading docs. Use their approved runbooks and assigned resources when that work is separately authorized. For exact old behavior and absent parity, read Original and current workflows.
+
+Continue with the practice tutorial, CLI reference or maintainer reference.
+Practice without hardware
+
+This tutorial extends the earlier operator practice workflow with the current window labels and daily launchers. It uses a new private directory, synthetic site coordinates and a historical NOAA 15 TLE. It never uses the daily station as a disposable fixture. None of the steps below starts a service or opens a device.
+Inspect the existing station first
+
+From any normal working directory:
+
+satgs-operator status
+satgs-operator --format json status
+
+Home > Reload (Ctrl+R) is the matching native action. These commands inspect the already selected workspace. They do not initialize or repair it. If the daily selection or workspace is unavailable, retain the diagnostic and read satgs-operator docs --text; do not issue init against the daily path.
+Create a private practice workspace
+
+Use Bash and the daily satgs-operator command already selected by reviewed setup. The following creates a unique parent directory under /tmp; it changes only the task-specific variables shown. Keep the printed path for reopening.
+
+satgs_practice_root=$(mktemp -d /tmp/satgs-guide-practice.XXXXXXXX) || exit 1
+satgs_practice_station="$satgs_practice_root/practice station"
+printf 'Practice directory: %s\n' "$satgs_practice_root"
+satgs-operator --workspace "$satgs_practice_station" init
+satgs-operator --workspace "$satgs_practice_station" status
+satgs-operator-gui --workspace "$satgs_practice_station" &
+
+The new station starts at generation 1 with no selection and no location. Unknown observations and unqualified calibration/heading are expected. The space in practice station is deliberate; retain the quotes around its path. The final & leaves the graphical window running while this terminal accepts the paired CLI examples. Close that window normally when the exercise is done. The daily selection still points to the original saved workspace. The explicit --workspace changes this invocation only. Keep this terminal open for the remaining examples, or set the two task-specific variables to the exact printed paths in another terminal.
+
+The examples below use 34.0 degrees north, -118.0 degrees east and 100.0 metres, later changing longitude to -117.0. These are synthetic practice values chosen for a repeatable calculation, not a surveyed site or Cole's location. Mean-sea-level reference is explicitly declared for the exercise; no conversion is performed.
+Select Guided Arrow and retain returned identities
+
+In Setup choose guided_arrow and QPT130, then Preview. Review shows the previous and proposed selection. Click Save, then Reload to see the saved intent. To perform the same change through the CLI instead, use this sequence once:
+
+satgs_component_preview=$(satgs-operator --workspace "$satgs_practice_station" --format json components-preview --profile guided_arrow) || exit 1
+satgs_component_id=$(printf '%s' "$satgs_component_preview" | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["preview_id"])') || exit 1
+printf '%s\n' "$satgs_component_preview"
+satgs-operator --workspace "$satgs_practice_station" apply --preview "$satgs_component_id" --confirm
+satgs-operator --workspace "$satgs_practice_station" reload
+
+Review the printed JSON before the apply line. preview_id is the actual value returned by your operation, not a fixed token to copy from this guide. Human output intentionally omits internal IDs, so use --format json before the command when a later command needs an identity. Stop if preview or JSON parsing fails. The GUI and CLI alternatives are the same workflow; do not mistake doing both for a necessary second save.
+Cancel a location preview
+
+In Location enter latitude 34, longitude -118, altitude 100, and mean_sea_level. Click Preview, inspect Review, then Cancel (Esc). Home > Reload must still show no effective location. Equivalent CLI:
+
+satgs_location_preview=$(satgs-operator --workspace "$satgs_practice_station" --format json location-preview --latitude-deg 34 --longitude-deg -118 --altitude-m 100 --altitude-reference mean_sea_level) || exit 1
+satgs_location_id=$(printf '%s' "$satgs_location_preview" | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["preview_id"])') || exit 1
+printf '%s\n' "$satgs_location_preview"
+satgs-operator --workspace "$satgs_practice_station" cancel --preview "$satgs_location_id"
+satgs-operator --workspace "$satgs_practice_station" status
+
+Cancelling preserves saved coordinates and generation. It retains a cancellation artifact, so it is not a promise of zero filesystem writes. Repeating cancel is idempotent. Applying that cancelled preview must return conflict, exit 3.
+Save and reopen the manual position
+
+Preview the values again. The previous cancelled identity is not reusable. Review the new proposal, then Save. Through the CLI:
+
+satgs_location_preview=$(satgs-operator --workspace "$satgs_practice_station" --format json location-preview --latitude-deg 34 --longitude-deg -118 --altitude-m 100 --altitude-reference mean_sea_level) || exit 1
+satgs_location_id=$(printf '%s' "$satgs_location_preview" | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["preview_id"])') || exit 1
+printf '%s\n' "$satgs_location_preview"
+satgs-operator --workspace "$satgs_practice_station" apply --preview "$satgs_location_id" --confirm
+satgs-operator --workspace "$satgs_practice_station" reload
+
+After the one component save and this location save, generation is 3 if you have made no other changes. Status reports manual latitude 34.0, longitude -118.0, altitude 100.0 and declared reference mean_sea_level in JSON. The everyday view may omit technical identity fields. GPS stays unavailable, installation unknown and heading/calibration unqualified.
+
+Close the window normally and run the same quoted GUI command from the first section again, or use Home > Open station... and choose this practice directory. Reload must retain the manual selection. Opening another workspace in a window does not retarget the saved daily launcher selection.
+Plan from an explicitly local historical TLE
+
+Create a local CSV with the same explicit historical data used by the bundled example. The shell redirects only into your new private practice directory. It does not require the application's Python interpreter, discover an old installation or fetch a TLE:
+
+satgs_practice_tle="$satgs_practice_root/NOAA 15 historical.csv"
+printf '%s\n' 'norad_id,name,tle,date' '25338,NOAA 15,"NOAA 15,1 25338U 98030A   25135.84934273  .00000229  00000+0  11192-3 0  9996,2 25338  98.5367 161.5741 0011424  74.5549 285.6893 14.26965248404873",2025-05-16 02:51:09 UTC' > "$satgs_practice_tle"
+satgs-operator --workspace "$satgs_practice_station" --format json plan --start 2025-05-16T03:00:00Z --norad-id 25338 --span-days 1 --elevation-deg 20 --tle-file "$satgs_practice_tle"
+
+The resulting file has this header and one quoted TLE record. If entering it in a text editor instead, preserve both lines and save it at the exact satgs_practice_tle path. Do not replace a real station's satellite catalog.
+
+norad_id,name,tle,date
+25338,NOAA 15,"NOAA 15,1 25338U 98030A   25135.84934273  .00000229  00000+0  11192-3 0  9996,2 25338  98.5367 161.5741 0011424  74.5549 285.6893 14.26965248404873",2025-05-16 02:51:09 UTC
+
+Then run the plan line. In the GUI, set Results fields to the same start, NORAD ID 25338, span 1, elevation 20 and full local CSV path, then Calculate. The expected result has source: operator_selected_local_tle, refresh_performed: false, execution_enabled: false, and opportunities from the real orbit calculation. The exact plan ID depends on your workspace identity and revision. No fixed ID in a document can replace it. Keep the historical date visible: this exercise does not demonstrate current orbit freshness.
+Compare planning inputs after relocation
+
+In Location change longitude from -118 to -117, leaving latitude 34, altitude 100 and reference unchanged. Preview and Save. CLI equivalent:
+
+satgs_relocation_preview=$(satgs-operator --workspace "$satgs_practice_station" --format json location-preview --latitude-deg 34 --longitude-deg -117 --altitude-m 100 --altitude-reference mean_sea_level) || exit 1
+satgs_relocation_id=$(printf '%s' "$satgs_relocation_preview" | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["preview_id"])') || exit 1
+printf '%s\n' "$satgs_relocation_preview"
+satgs-operator --workspace "$satgs_practice_station" apply --preview "$satgs_relocation_id" --confirm
+satgs-operator --workspace "$satgs_practice_station" --format json status
+satgs-operator --workspace "$satgs_practice_station" --format json plan --start 2025-05-16T03:00:00Z --norad-id 25338 --span-days 1 --elevation-deg 20 --tle-file "$satgs_practice_tle"
+
+The earlier plan is marked revalidation_required: true. The new plan has a different station revision and longitude. TLE bytes and calculation time/span/ mask are unchanged. Compare those inputs before comparing opportunity times. This is a relocation of the planning site, not an antenna alignment command.
+Inspect independent observation states
+
+The optional synthetic status exercise is explicit and local:
+
+satgs-operator --workspace "$satgs_practice_station" replay --state critical
+satgs-operator --workspace "$satgs_practice_station" --format json status
+
+Home > Reload shows critical system health alongside transport_pass and unqualified heading. JSON identifies synthetic_replay, fixed fixture time and live_hardware_observed: false. The saved manual position does not change. replay --state unknown restores unknown replay dimensions; it does not undo the component or location saves.
+Rehearsal and unavailable live controls
+
+The public Run form can freeze and review an input-bound request, but ordinary owner admission remains closed. There is no copy-and-run live or rehearsal run-start command that this guide can supply without the separately reviewed controlled owners and exact inputs. Do not construct broker, serial or device identities from the practice coordinates.
+
+The retained hardware-free daily-support delivery provides this separate procedure, only when that accepted support directory and its recorded runtime environment are present:
+
+"$HOME/Downloads/satgs-daily-support-20261111/rehearse.sh" --accept-trusted-native
+
+That script deliberately targets the retained runtime application, creates its own disposable workspace and records an evidence report. It does not exercise this guide candidate's selected GUI and does not initialize the daily station. Its controlled real-owner boundaries are not a broker or serial-device run. The guide candidate's consolidated acceptance checks documentation, worked examples and Help behavior, not those older runtime scenarios again. Use each accompanying report for its actual software outcomes; do not treat an unexecuted command as a PASS.
+
+For a started controlled run, Run > Cancel run and run-cancel --run-id request local cancellation. Before starting, run-status/run-cancel return not_started, not successful cancellation. Keep software completion, command submission, manager outcome and physical state separate. PTU Connect/Move/Stop remain gated for live use; no tutorial step enables them.
+Inspect and export results
+
+satgs-operator --workspace "$satgs_practice_station" report
+satgs-operator --workspace "$satgs_practice_station" --format json report
+satgs-operator --workspace "$satgs_practice_station" export --output "$satgs_practice_root/practice report.json"
+
+Results > Report and Export... are the equivalent GUI actions. Inspect the position/reference, retained plans, replay provenance and operation results in the JSON. Export must create a private new file. Repeating the exact export returns exit 4 and leaves the existing bytes intact. Choose another filename if you need another snapshot. Keep the practice directory and report; no deletion or cleanup is part of this tutorial.
+Deliberate negative checks
+
+These checks belong only to this new practice workspace. Invalid latitude nan must return exit 2 without changing saved coordinates. Applying a valid preview without --confirm must return exit 2. Applying a cancelled or stale preview must return exit 3. A preview made before the relocation becomes stale. Do not weaken these restrictions to make a script proceed.
+
+The complete argument grammar and outcome meanings are in the CLI reference. The original-workflow comparison explains why a local planning exercise does not replace queued RF tracking or legacy result storage.
+CLI reference
+
+The public application commands are satgs-operator and satgs-operator-gui. Installed daily wrappers choose the saved application and workspace. They work outside the extraction directory. The direct CLI package entry point used without those wrappers defaults to ./satgs-workspace; the direct GUI without --workspace opens with no station selected. Specify an absolute --workspace when using either directly, instead of confusing those developer behaviors with the shared daily selection.
+Command grammar
+
+satgs-operator [--workspace PATH] [--format human|json] COMMAND [OPTIONS]
+satgs-operator --read-docs
+satgs-operator-gui [--workspace PATH]
+
+Global options precede the command. Arguments are not abbreviated. Quote paths containing spaces. --workspace affects one invocation, not the saved daily selection. Human output uses readable fields and omits low-level IDs and paths. JSON returns the established status and result, or status and error, envelope. Read a returned ID from result; never invent one. JSON errors retain their code and message. Use satgs-operator --help or COMMAND --help for the installed parser's exact option spelling.
+Documentation
+Form 	Behavior
+satgs-operator docs	Opens the bundled HTML with the ordinary local default viewer on a usable desktop; otherwise prints readable terminal text.
+satgs-operator --read-docs	Alias of the same docs dispatcher, with the same selection and fallback behavior.
+satgs-operator docs --text	Prints the terminal guide directly; no display, Tk, browser or pager.
+satgs-operator --format json docs --text	Preserves the CLI JSON envelope, including documentation mode/message/text and technical resource identity.
+
+Docs are available with missing or invalid configuration and before station initialization. SSH sessions use terminal fallback even if an inherited display variable exists. Viewer absence, failure or timeout falls back to text. Exit 0 then means documentation was delivered, not that a window rendered. Missing or unreadable packaged resources return docs_unavailable, exit 4. There is no topic option; docs --topic anything is invalid input, exit 2.
+Workspace inspection and creation
+Command 	Options 	Effect and matching GUI action
+init	--case pelican-qpt130, the default and only supported case	Creates a new private workspace only. Home > New station.... Refuses existing or unsuitable targets rather than resetting them.
+status	None	Reads saved station, generation/revision, configuration, manual/effective/replay position and independent status dimensions. Home > Reload (Ctrl+R).
+reload	None	Same saved-state read as status. Required after another interface saves.
+catalog	None	Reads canonical profiles, components and constraints. Corresponds to Setup's available choices, not installed hardware inventory.
+report	None	Reads the redacted report with retained plans and operation results. Results > Report.
+
+status and report do not create or initialize a workspace, contact a broker or construct operational owners. Reports are local evidence, not proof of an active process. Keep credentials and workspace data outside source history.
+Component selection
+
+components-preview --profile guided_arrow|full_msel|custom
+                   [--changes JSON_PATH] [--ptu-model QPT130]
+                   [--expected-revision SHA256]
+
+The profile is required. Model defaults to QPT130; QPT-130 is also accepted by the shared case validator. Other models are rejected for this Pelican case. --changes reads a bounded ordinary UTF-8 JSON file containing either canonical selection fields or a component-to-change mapping. Unknown components, unsupported provider combinations and missing stable hardware instance identities are rejected. The CLI and Setup use the same validator.
+
+For example, {"rf.frontend":"omit"} expresses an explicit component-mode change for a Custom draft. It is not an instruction to uninstall a package or switch off equipment. Complete canonical documents must satisfy their real identity, provider and version contracts. Do not infer those from this one-field example.
+
+Preview returns result.preview_id, previous/proposed values, the expected station revision and affected plans. It saves a preview artifact without applying configuration. Supplying --expected-revision allows a caller to reject a concurrent change explicitly. A revision is the exact saved document's 64-character SHA-256 identity from JSON status, not a generation number.
+Manual location
+
+location-preview --latitude-deg NUMBER --longitude-deg NUMBER
+                 --altitude-m NUMBER
+                 --altitude-reference unspecified|mean_sea_level
+                 [--expected-revision SHA256]
+
+All four location inputs are required. Latitude/longitude are decimal degrees, north/east positive. Altitude is metres, not feet. Values must be finite and pass the shared station-location validator; latitude is [-90,90], longitude [-180,180]. The reference is declared, not measured or converted. Location > Preview is equivalent. The returned preview does not move equipment.
+Apply or cancel a preview
+
+apply --preview PREVIEW_ID --confirm
+cancel --preview PREVIEW_ID
+
+PREVIEW_ID is the exact returned preview identity. Apply requires explicit confirmation after review. Review > Save applies the same operation. Cancel corresponds to Review > Cancel (Esc), leaves station settings unchanged and records cancellation. Repeated successful apply/cancel is idempotent. A cancelled preview, stale revision or conflicting active managed runner cannot be forced through. A successful save can be followed by partial receipt/I/O failure; inspect retained state before retrying.
+Numerical pass planning
+
+plan [--start ISO8601_WITH_OFFSET] [--norad-id INTEGER]
+     [--span-days NUMBER] [--elevation-deg NUMBER]
+     [--tle-file LOCAL_CSV]
+
+Option 	Default 	Units and restriction
+--start	2025-05-16T03:00:00Z	Explicit UTC offset required; normalized to UTC. Historical replay default.
+--norad-id	25338	Positive integer through 2147483647, present unambiguously in the CSV.
+--span-days	1	Finite days from 1/24 through 7.
+--elevation-deg	20	Finite degrees from 0 through 90.
+--tle-file	Bundled historical NOAA 15 CSV	Bounded ordinary local CSV; no refresh, URL, broker lookup or source modification.
+
+This uses the real numerical orbit calculation and records a plan, with at most 256 opportunities. Results > Calculate is equivalent. Missing saved location, invalid time/units, malformed or mismatched TLEs and missing scientific dependencies are reported. A plan records its input location/reference/revision, TLE hash and epoch, refresh=false and execution_enabled=false. It is not a queue submission or completed tracking run.
+Runtime request review and execution
+
+The following is a grammar reference, not a ready-to-run hardware example:
+
+run-preview --plan-id PLAN_ID --deployment-config CONFIG.json
+            --runtime-bindings BINDINGS.json --station-config OWNERS.json
+            --tle-file LOCAL.csv --duration SECONDS
+            [--opportunity INTEGER] [--mode operational|rehearsal]
+run-start --run-id REQUEST_ID --confirm
+run-status --run-id REQUEST_ID
+run-cancel --run-id REQUEST_ID
+
+PLAN_ID is an existing saved plan identity. CONFIG.json is the canonical deployment configuration matching the saved selection. BINDINGS.json is the reviewed runtime-owner binding document. OWNERS.json contains the explicit station/owner settings accepted by the runtime reader. LOCAL.csv must match the exact local TLE used for planning. These are separately supplied private reviewed inputs, not filenames that SATGS creates automatically.
+
+Duration is positive finite seconds that fit the selected opportunity. Opportunity is 1-based and defaults to 1. Mode defaults to operational. Review run freezes all input identities and the saved position/reference; Start run separately confirms. Changes after review require a new request. Ordinary production admission remains empty. rehearsal records intent, not a permission bypass. No valid live owner recipe is supplied by this release.
+
+run-start owns synchronous CLI execution and prints progress on stderr. Use a separate terminal with the same workspace and request ID for status or local cancellation. run-status before start reports not_started. A saved unfinished progress record does not establish a live process. Cancel run does not prove remote cancellation or physical Stop. A finished result is returned on repeated execution of that request rather than silently repeated motion.
+Reports, export and replay
+
+export --output NEW_FILE
+replay --state STATE
+
+Export writes one new private JSON report and refuses an existing output. The parent directory must already be suitable; - is not an output path. Results > Export... is equivalent. No database or remote-storage action is implied.
+
+Replay is an explicit CLI-only synthetic observation selection. States are unknown, disconnected, silent, no_fix, reported_3d, stale, mismatched, incomplete and critical. Home > Reload displays the saved scenario. It does not overwrite the manual position, connect hardware or make GPS eligible for station selection. Source/time/fix/freshness remain distinct.
+PTU command session
+
+bench --configuration BENCH.json
+
+The interactive commands are connect, status, preview PAN TILT, move, stop, disconnect and quit. Pan/tilt are degrees. The same session operations back the PTU page. BENCH.json is an approved private setup document with exact manager, wire-address, serial, protocol, calibration/no-go and trust inputs. Neither a device label nor a guessed USB path supplies those inputs. Current live admission is closed. The guide does not prescribe a live Connect/Move/Stop sequence. Passive cleanup or a returned acknowledgement is not physical Stop.
+Exit codes and result meaning
+Exit 	Meaning
+0	Requested local operation completed, or documentation delivered. Not installation/navigation readiness or physical completion.
+2	Invalid arguments, invalid input, unsupported choice, or a missing/malformed station document rejected by the package reader.
+3	Conflict, stale/cancelled preview, workspace activity/private-directory/marker admission rejection, unavailable prerequisite, not_started or rejected owner/runtime admission.
+4	I/O, calculation, partial local operation, unavailable guide resource or unexpected local failure.
+5	Runtime execution failure.
+6	Runtime result/progress persistence failure. Keep partial artifacts.
+7	Runtime cleanup failure where reported by the runner.
+8	Physical state indeterminate. JSON status is INDETERMINATE, not PASS.
+130	Local CLI/run cancellation or interruption. Does not establish physical Stop.
+
+For runtime results inspect primary, manager_outcome, software_completed, physical_state, submission details and cleanup/save fields together. The operation's evidence is more specific than a single process exit code.
+
+The daily wrapper validates its own selection, application and workspace before the package runs. Its missing/unsuitable selected-path failures can return exit 1 with a launcher diagnostic rather than the package JSON envelope. Keep the launcher and package failure layers separate. Docs bypasses station validation, not the selected-application identity check.
+
+See the hands-on examples for real returned-ID handling, and the maintainer appendix for installed resource and launcher details.
+Original and current workflows
+
+The original M-SEL ground station installs a collection of cooperating services, schedules satellite passes through a broker and runs a hardware/RF-oriented pass procedure. Native SATGS adds a shared saved-workspace workflow for configuration, manual position, local calculation and reviewed runtime requests. It is not a replacement GUI for every original service or command.
+
+This comparison uses the fixed original source revision identified in the maintainer reference. Original command forms below were source reviewed, not executed as part of this documentation work. They can contact brokers, change TLE files, start devices, transmit commands or invoke other programs. Do not run them as tutorial steps.
+Read the command notation
+
+In this chapter only, uppercase argument names are descriptions, not runnable values. OLD_CONFIG is the approved original YAML configuration file; OLD_SAT_DB its local satellite CSV; SIGNAL_DB its emission-ID CSV; NORAD_ID a satellite in that database; JOB_ID an ID returned by the original queue; and SECONDS, DAYS and DEGREES have the units named. DOWNLINK_MHZ and UPLINK_MHZ are approved RF frequencies in MHz, not numbers supplied by this guide. SAMPLE_MSPS is the approved RF sample rate in millions of samples per second. LOCALE names an existing pass_finder_locales entry. PIX_ID is a configured sensor ID, PTU_ID is a configured application positioner ID, and SERIAL_PORT is that deployment's assigned operating-system device path. An optional subscriber/client ID of 0 selects all configured application IDs; it is not an instruction to use physical wire address 0. Current PREVIEW_ID, PLAN_ID and REQUEST_ID are full actual returned identities from the selected workspace's JSON. They are not interchangeable with legacy numeric job IDs.
+Installation, selection and location
+Operator goal and original supported input 	Original effect 	Current command and matching GUI 	Preserved, changed or absent parity
+Install the complete suite: ./build.sh in the original checkout with all pinned submodules present	Copies five missing configuration/notebook templates, then invokes ten pip package installations in order. Host preparation, service setup and operational configuration are separate.	Review/install the side-by-side candidate with its supplied setup procedure. components-preview --profile full_msel, then confirmed apply; Setup > Profile full_msel > Preview > Save records configuration intent only.	Full M-SEL installer remains in the shared product. The native Save action is deliberately not that installer.
+Choose fewer components by editing the old installer or individual service deployment	Original build.sh installs its fixed full set and has no profile parser. README advises direct microservice setup for partial deployments.	Shared deployment CLI provides catalog/validate/plan/compare; ./build.sh --profile guided_arrow --dry-run is static deployment planning. Native components-preview --profile guided_arrow or Custom mirrors canonical selection constraints.	Explicit component/provider identities, install/reuse/external/omit and compatibility constraints are added. Guided Arrow installer apply is not delivered. External owners remain independently provisioned.
+Set ground_station_lat, ground_station_lon, ground_station_altm in OLD_CONFIG	PassFinder/QueueClient use configured site coordinates for orbit calculations; PassRunner initializes its own observer. Coordinates are degrees and altitude metres.	location-preview --latitude-deg ... --longitude-deg ... --altitude-m ... --altitude-reference ..., then apply --preview PREVIEW_ID --confirm; Location > Preview > Save.	Units and station-planning purpose are preserved. Current explicit manual source, declared altitude reference, revision binding and conflict checks are new. Saving location does not align or move an antenna.
+Calculate at another configured locale: pass_finder -config OLD_CONFIG -sf OLD_SAT_DB --sids NORAD_ID --at LOCALE -d DAYS --elmask DEGREES	Selects pass_finder_locales[LOCALE] lat/long/alt rather than the primary site. Original default at_locale=None uses the primary site.	Use a separate current workspace for another site, or explicitly preview/save relocation and calculate again. Home > Open station... and Location expose that workflow.	The numerical goal is supported, but no current --at alias or locale-name selector exists. Current position changes persist and invalidate old plans.
+Install/start the original ground_station, Pixhawk, PTU and other systemd services	Service templates run their configured processes. Original README separately instructs daemon-reload, enable and start.	No native service activation command or button.	Preserved deployment responsibility, no GUI replacement. Opening SATGS does not start those services.
+
+The original README says build.sh compiles all protobufs. Its actual script only copies templates and invokes pip. Compilation is delegated to the original package build tooling (setuptools-protobuf in pyproject), so success depends on that tooling and compiler. The current wheel workflow explicitly generates protobuf modules during reviewed build staging; runtime does not need the compiler. Original broad recursive/world-writable permission examples are historical instructions, not recommended current deployment practice.
+
+The original build script has no fail-fast shell setting or explicit per-command checks. The later shared installer adds guarded validation and failure propagation while retaining the Full M-SEL package order. Do not attribute those later modular installer guarantees to the fixed original revision.
+Prediction and TLE inputs
+Operator goal and original command 	Original effect 	Current command and matching GUI 	Changed defaults, persistence and limits
+Find passes: pass_finder -config OLD_CONFIG -sf OLD_SAT_DB --sids NORAD_ID -d DAYS --elmask DEGREES	Calculates opportunities after checking selected TLE age, conditionally refreshing from Celestrak and writing an updated satellite CSV. UTC output is default; --local selects configured US/Eastern presentation.	plan --start ISO8601_WITH_OFFSET --norad-id NORAD_ID --span-days DAYS --elevation-deg DEGREES --tle-file LOCAL_CSV; Results > Calculate with matching fields.	Actual orbit calculation is retained. Current path is offline/read-only for TLEs, one selected NORAD per plan, explicit saved location/revision and stored plans. Default is historical NOAA 15, one day and 20 degrees; original declared constants are seven days and 15 degrees.
+Add/delete a satellite: add_tle NORAD_ID -sf OLD_SAT_DB and del_tle NORAD_ID -sf OLD_SAT_DB	Add fetches through Celestrak scraping and updates CSV; delete removes the entry and rewrites CSV.	No native TLE catalog editor or fetch command. Supply an explicitly approved local CSV to plan.	Legacy-only editing/fetching is preserved in its own path. Current planning does not silently perform it.
+Export a runsheet: pass_finder -config OLD_CONFIG -sf OLD_SAT_DB --sids NORAD_ID -d DAYS --to_csv	Writes a schedule CSV in configured run_sheet_dir for the original batch queue workflow.	Current Report/Export... exports a JSON operator report.	No equivalent runsheet/queue export in the native window. A JSON report is not an add_schedule input.
+Filter GNSS/radar/weather or visualize: pass_finder --gnss, --sband-radar, --lband-weather; plot_sky_view and pass_plotter	Original selection masks and plotting tools use their own inputs/dependencies and may use PassFinder's refresh path.	Current Results accepts explicit NORAD ID and numerical inputs.	These legacy category filters/plot windows have no current native equivalent. Local numerical planning is not a claim of complete plotting parity.
+
+The README's exact example uses pass_finder --sids ... --d ... --elmask .... The parser declares --duration and -d. Because the original argparse parser allows unique long-option abbreviation, --d can resolve to --duration there; it is not a separately declared option. Prefer canonical spelling in source references. Current satgs-operator disables abbreviation.
+
+Original DEFAULTS.tle_validity is actually 0.5 days even though its nearby docstring says two days. The original pass-finder constructor's prose also mentions a different default span. The declared constants and call paths, not those comments, determine behavior. TLE freshness remains an operator assessment in the current explicit local path. A separate original IAU fetch_tle function does not describe the Celestrak refresh/add-TLE path.
+Direct and queued operations
+Operator goal and original supported form 	Original effect 	Current form and matching GUI 	Preserved behavior and parity boundary
+Execute a direct pass: run_pass -config OLD_CONFIG -sf OLD_SAT_DB -tf SIGNAL_DB -id NORAD_ID -dlfc DOWNLINK_MHZ -dlfs SAMPLE_MSPS --duration SECONDS	Loads configured hardware/transport clients, predicts/sets a pass window, primes/tracks/parks, records logs and optional RF data. Uplink/downlink emission IDs or RF options select additional behavior.	run-preview with actual saved plan, deployment/runtime/owner/TLE inputs, then separately confirmed run-start --run-id REQUEST_ID --confirm; Run > Review run > Start run.	Strict revision/input/owner admission and outcome distinctions are added. Ordinary live admission is unavailable. A plan preview or controlled rehearsal is not a real pass replacement. Current native forms do not reproduce legacy RF controls.
+Submit the next numbered pass: add_pass -config OLD_CONFIG --svid NORAD_ID --passnumber 1 -dlfc DOWNLINK_MHZ -dlbw BANDWIDTH_MHZ	QueueClient calculates a candidate pass and publishes a job request to QueueManager. At least one uplink/downlink is required. Duration is seconds; frequencies/bandwidth are MHz.	No native queue-submission form. run-preview creates a local reviewed request, not a queued job.	Legacy broker queue remains a separate supported deployment path, not native parity.
+Submit an explicit time: add_pass -config OLD_CONFIG --svid NORAD_ID --starttime YYYY-MM-DD-HH:MM:SS --duration SECONDS -dlfc DOWNLINK_MHZ -dlbw BANDWIDTH_MHZ	Treats the supplied time as UTC and submits through the original broker path; start time and pass number are mutually exclusive.	Current planning takes an explicit UTC offset; Run selects a plan opportunity.	No matching queue action. Do not confuse original compact UTC strings with current ISO 8601 input or assume --local changes submitted UTC interpretation.
+Import a schedule: add_schedule -config OLD_CONFIG [--continue-id] or [--start-id INTEGER]	Requests queue and chooses the most recently modified regular file in configured run_sheet_dir, then parses/queues its rows. It does not take a schedule filename argument.	None in the native GUI/CLI.	Preserved legacy-only. Do not pass current JSON export to this command or imply a native schedule editor exists.
+Inspect/remove/clear jobs: request_gs_queue -config OLD_CONFIG; remove_pass -config OLD_CONFIG --jobid JOB_ID; clear_gs_queue -config OLD_CONFIG	Publishes broker requests; remove edits pending queue entries and clear replaces the in-memory queue/state.	status inspects the workspace; run-status --run-id REQUEST_ID reads a run record; neither reads the legacy queue.	No native queue manager equivalent. Queue removal/clear does not prove termination of an already running child or physical stopping.
+Cancel an operation	Original pass runner shutdown/parking paths and queue edits have different meanings; queue clear/remove do not retain a terminating child-process handle.	cancel --preview PREVIEW_ID cancels only a configuration preview. run-cancel --run-id REQUEST_ID requests local cancellation of a started run; matching Review > Cancel and Run > Cancel run.	Current cancellation is explicit and records remote/physical-stop limits. No software cancellation is a measured physical Stop.
+
+Original run_pass defaults its config to relative config/config.yaml, so its working directory matters. Original pass-finder and queue public defaults use the home-based ground_station configuration. The current daily wrapper resolves the shared workspace regardless of normal working directory. Direct developer entry points still have their own documented workspace default.
+
+Original direct-run omission flags are --nopixhawk, --nofrontend, --noptu and --nopdu; original QueueManager --testmode supplies those to its child. Pixhawk/PTU manager --nohw selects simulated hardware, not an isolated documentation sandbox. In particular, original _initialize_ptu still creates a Messenger before selecting PtuClient test mode. These flags do not establish zero broker/filesystem effects, current controlled-owner admission or physical safety. The new tutorial therefore uses local planning and a separately controlled rehearsal, not an improvised legacy no-hardware run.
+
+The original QueueClient constructs its broker/TLE path before several semantic add-pass argument checks. Even a command later rejected for missing RF intent can already have effects. None of those legacy commands is used as an offline documentation example. The current docs path bypasses all such owners.
+
+Original QueueManager runs a pass with blocking subprocess.run(check=True) in a job thread. On child failure it catches/logs the error, still logs Completed Pass and advances into post-processing. Those words are not proof the pass succeeded, let alone physical completion. The current request/result path retains primary failure, cleanup, submission, software-completion and physical-state evidence separately.
+Pixhawk, PTU and results
+Operator goal and original configuration/path 	Original effect 	Current command and matching GUI 	Preserved or missing equivalence
+Observe Pixhawk position/attitude through configured IDs and original Pixhawk manager/subscriber	Original pass runner creates PixhawkSubscriber for logging. A message contains observations; receipt alone is not fix/health/heading qualification.	Home status and Location GPS expose separate evidence; replay --state ... selects only synthetic observations. Use GPS remains disabled.	Original observations and strict owner work remain separate from live GPS station selection. No native manager startup or admitted live measured-location workflow.
+Inspect original telemetry: echo_pixhawk PIX_ID -config OLD_CONFIG; manager form python -m pixhawk.pixhawk_manager --pix-id PIX_ID --port SERIAL_PORT -config OLD_CONFIG	Subscriber selects configured sensor IDs and subscribes/logs broker observations; manager opens the assigned serial source and publishes. PIX_ID=0 in subscriber selects all configured sensors, not a physical device address.	Current Home/Location display admitted local/replay dimensions. There is no native live Pixhawk manager launch action.	The original README's manager flag --ptu-id differs from its actual --pix-id parser. No current GPS selection equivalence is claimed.
+Select PTU model/protocol/baud/no-go policy in original YAML and per-owner setup	Original PTU client/manager own addressing and serial protocol; pass runner issues load/prime/track/park commands. Original README lists QPT-130/200/500 and PTCR96/PTCR20.	Pelican case accepts QPT130 only. PTU bench configuration has deliberate session/target review and current-position/Stop admission gates.	Wider shared Full M-SEL model contracts are preserved. Human PTU labels, positive application manager IDs and serial wire addresses are different identities. No automatic conversion or physical qualification is claimed.
+Original PTU client tools: echo_ptu PTU_ID -config OLD_CONFIG, calibrate_ptu PTU_ID -config OLD_CONFIG, reset_ptu PTU_ID -config OLD_CONFIG, park_ptu PTU_ID -config OLD_CONFIG	Uses configured broker/positioner identities. ID 0 targets all configured application positioners. park_ptu resets the owner, waits, then requests park; it is not a dedicated physical Stop contract.	PTU bench session has Status/Preview/Move/Stop/Disconnect with unavailable live admission. No current native Calibrate/Reset/Park equivalent.	Preserve legacy command meanings and unavailable parity. Do not map a park request to current Stop or interpret acknowledgements as measured stopping.
+Keep original pass artifacts under configured logging_dir	Original runner writes truth, Pixhawk/PTU/front-end logs, TLE/test details and configured captures. QueueManager can run quick_look/post-processing on a latest result directory.	report, export --output NEW_FILE; Results > Report/Export... retains local station plans and operation evidence.	Native JSON report is not an RF recording or legacy directory replacement. Runtime result artifacts preserve software/physical outcomes; keep partial evidence.
+Share results with Box when box_connectivity is enabled	Original QueueManager invokes box_sync after analysis for satellite 63231; this is narrower than a generic claim that all results always synchronize.	None in native workflow.	Optional legacy-only feature requires package, credentials and assigned storage. Current GUI does not install/enable it or claim uploads.
+Use browser dashboard/database history	Original deployment includes separately owned dashboard services. The pinned backend initializes broker clients and reads satellite CSV in app/config.py; its captured code does not establish a persistent database-history implementation.	Native SATGS window and local JSON report are separate.	No native database-history browser, database migration or dashboard startup. Neither a TLE CSV named database nor dashboard connectivity proves database persistence.
+
+Exact original component pins, source symbols and current implementation paths are in the technical appendix. Model/protocol names in an original README establish historical configuration vocabulary, not an allocated unit's current behavior, calibration or physical Stop contract.
+
+In the original PTU manager, --ptu-id selects a positive application positioners[].id, and --port chooses the serial connection. YAML supplies protocol and baud; the parsed --protocol is explicitly ignored. The pinned serial factory creates PTCR20 without a wire ID and PTCR96 with wire ID 0. Application ID 2 therefore does not imply serial address 2. Historical serialptu guidance pairs non-high-resolution QPT130/PTCR20/9600 and QPT200/500/PTCR96/57600; those are source-reviewed historical combinations, not permission to choose an allocated unit's settings. The current bench binding keeps application and wire identities explicit and retains the closed admission gates.
+Maintainer reference
+
+This appendix records technical identities and deployment details that do not belong in the everyday native window. The guide's operator narrative and tutorial remain the starting points for daily use.
+Revision and source boundaries
+Record 	Exact identity 	What it establishes
+Original M-SEL ground_station comparison	dd4ebf15f98d66cd8e973c7bd83becebef243276, tree 789bd5b2087609e62b5834f1ef279f2b43931839	Fixed source reviewed in the September 22 Slice 0 record and recaptured from existing local Git objects for this guide. No moving upstream main substituted.
+Original inherited base	5307276bf9a51be3ab858a2c0cef38469d10e5fb	Historical base, not the selected current native implementation.
+October 8 delivery baseline	280fb4a8dc11efa35c190c27ebb147e5a2db689b	Historical delivery provenance only. Not the original comparison revision or current UI revision.
+Accepted native UI artifact	9bdd7bfa3ebb76d8c840d36baa3625c932aec77d, tree 30f31565d8ae37273a8c334fcc05e4f02c5eeac9	Carries accepted plain component source and satgs 0.0.1+ui.20261111.1. Artifact identity is distinct from component Git identity.
+Accepted launcher correction	d36b5729c56d71b27682c68261a61f022d27c8ba	Reviewed launcher-fix artifact used as the launcher baseline.
+This guide candidate	satgs and reciprocal PTU package 0.0.1+guide.20261112.1	Separate candidate with version-matched bundled docs. Final artifact revision is supplied by its delivery record, not invented inside its own source.
+
+The original comparison capture records README blob fe40011dfdc20081179b7c95474d975179697e65, SHA-256 ee1df4ef1a1ac14542e63c448e1fefa2ca59ad6a831152374e91010845f85f3b, and build.sh blob a55603e0d4435d9f2b8e3f95e2cedebccaa571b6, SHA-256 aeb8d308c5a4e8b4fcc070025b66f576767776df13c90e79e0660d3fb9ee45a0. The source-only capture and copied-baseline manifest are review evidence, not runtime dependencies. They are excluded from the installed guide's lookup path.
+
+Original documentation at that revision contains docs/activemq_setup.md, not the later native operator guide. The operator-guide/tutorial chapters extend the retained October 28 native documentation, whose separate current-operator provenance records ground_station checkpoint ea4ad6ce9100f1ba0cd482f86994518ae08357ae and delivery checkpoint 7e7ffdf26e4f5dabcf1574738e6c55af168132fb. Do not attribute those later manual location/native controls to the original M-SEL revision.
+Original component pins
+
+These gitlinks come from the fixed original parent tree. They are historical source identities, not current release admission or installed package checks.
+Original component path 	Exact selected revision
+lib/cyberpowerpdu	96fb02eccc923c2d2831dd0c9023415b3e743c88
+lib/dsi_instruments	534c3a982b5e0af15efcd3ba276a13b70cda9888
+lib/live_dashboard_be	ea161c4109b26af3dd840b365a55d5647130a862
+lib/live_dashboard_fe	05c6d5993605064ced17445328b3da837ddb6e89
+lib/meteor-api	2d0b8fd06e50ef1669cb5e46983441d4139a608f
+lib/msel_post_processing	1211977cc2440aa8c8abd0b8c89d27f0c2762c9e
+lib/pixhawk	2c641d3ca3331a829452327e1704a824b95fc968
+lib/sat_tracker	d042abb35e12da465e29474476ae7acb25c64796
+lib/signal_hound	6bb6af2bf75068a8b87d02b9feef8e2eb85fe2cb
+nested lib/sat_tracker/lib/serialptu	b9f9c7b03c3c519bd9bf10da1ba291c7c6e6f3d4
+
+The current accepted native/runtime source retains six separately owned components: ground_station, meteor-api, stomp.py, pixhawk, sat_tracker and serialptu. Changed guide/package metadata does not qualify their production owner contracts or import their complete original Git histories.
+Source map for behavior claims
+
+All original paths below are relative to ground_station at the fixed original revision unless a pinned component is named. Current paths are relative to the selected candidate's ground_station component. Python basenames in the table mean src/satgs/BASENAME for ground_station, src/ptu_control/BASENAME for sat_tracker, src/pixhawk/BASENAME for pixhawk and serialptu/BASENAME for the serialptu package. This map is intended for source review, not clickable runtime file lookup.
+Behavior 	Original file and symbol 	Current file and symbol
+Public command spelling	pyproject.toml project.scripts; pass_finder.py:main; queue_client.py:addJob/addSchedule/removeJob/clearQueue/requestQueue; pass_runner.py:main	operator_cli.py:parser/dispatch/main; metadata keeps original console entries separately
+Full suite installation	build.sh, ordered five copy-if-missing operations and ten pip invocations; original pyproject.toml setuptools-protobuf configuration	build.sh profile validation/apply guards; deployment_cli.py and deployment_plan.py; native preview does not invoke installer
+Configured/alternate planning site	pass_finder.py:PassFinder.__init__, at_locale; queue_client.py:QueueClient.__init__; pass_runner.py:PassRunner.__init__	operator_core.py:Workspace.preview_location/apply/inspect; station_location.py:Location/prepare_manual_location/location_from_settings; runtime_configuration.py binding validation
+TLE update/fetch/persistence	pass_finder.py:PassFinder.__init__/add_sat_to_db/del_sat_from_db; utils.py:update_tle_db/add_new_tle/scrape_url	operator_planning.py:plan_workspace; runtime_configuration.py:_read_tle; no refresh call in local operator planning
+Pass calculation	utils.py:find_passes; pass_finder.py:run_sat_passes/generate_csv_file	operator_planning.py:plan_workspace, reuses utils.py:find_passes; Workspace.record_plan stores revision-bound output
+Queue effects/cancellation	queue_client.py public adapters and setupClient; queue_manager.py:clearQueueCb/deleteJob/job_thread/run	operator_runtime.py:preview_run/execute_run/run_status/cancel_run; no native broker queue editor
+Physical tracking and observations	pass_runner.py:_initialize_pixhawk/_initialize_ptu/main/shutdown, PixhawkSubscriber and PtuClient acquisition/commands; pinned component owners	pass_runner.py strict runtime-context/admission and owned lifecycle; operator_runtime.py result/physical-state separation; production admission remains unavailable
+Pixhawk manager flag and position source	Pinned pixhawk pixhawk_manager.py:main declares --pix-id, not README's --ptu-id; manager GLOBAL_POSITION_INT handling scales lat/lon by 1e-7 and altitude by 1e-3; pixhawk_subscriber.py:echo selects sensor IDs	operator_core.py:_replay_measurement and station_location.py preserve explicit source/reference/units; no admitted live GPS selection
+PTU application/wire identities	Pinned sat_tracker ptu_manager.py:main selects positioners ID and YAML protocol/baud; pinned serialptu make_ptu, proto_impl.py:PTCR20/PTCR96, protocol.py:Quickset._build_message retain no-ID versus wire-0 semantics	operator_bench.py and runtime/bench settings retain explicit selected identity contracts; live admission is closed
+Output/post-processing/Box	pass_runner.py log setup/truth/test-details/TLE writes; queue_manager.py:job_thread/analyze_thread/post_analyze_thread	operator_core.py:Workspace.report/export_report; operator_runtime.py progress/results; no native Box/database workflow
+Status meaning and human presentation	Original per-client observations/logging, not a shared native station view	operator_core.py:Workspace.inspect/_replay_measurement/_metadata_identity; operator_presentation.py:human_text/presentation_document
+Native widget labels/actions	No original native operator application	operator_gui.py:OperatorWindow._build_home/_build_setup/_build_location/_build_review/_build_results/_build_bench and Help menu callback
+Documentation dispatch/build	No original docs entry point	operator_docs.py; operator_cli.py; operator_gui.py; tools/build_operator_docs.py; setup.py:BuildPackage.run
+
+The original full installer package order is meteor-api, ground_station, msel_post_processing, cyberpowerpdu, dsi_instruments, pixhawk, sat_tracker, sat_tracker/lib/serialptu, signal_hound, and signal_hound/lib. The native release does not claim that its six-component candidate installed every optional full deployment package.
+Daily launcher and desktop entry
+Item 	Verified source contract
+Menu application name	SATGS
+Desktop entry category	Categories=Science;
+Desktop file	~/.local/share/applications/satgs-runtime-20261110.desktop; historical filename retained
+Exec target	Absolute quoted path to ~/.local/bin/satgs-operator-gui for the setup account; for admin, /home/admin/.local/bin/satgs-operator-gui
+Terminal GUI command	satgs-operator-gui, or the explicit installed wrapper if PATH is absent
+Terminal status command	satgs-operator status
+Shared daily selection	~/.config/satgs/operator.json, schema satgs-daily-selection.v1; application identity, candidate version and workspace are validated
+Usual saved daily workspace	/home/admin/satgs/station, preserved unless explicitly changed through an approved selection operation
+Current terminal PATH	Sourcing setup prepends the per-user bin path in that shell only; profiles and global PATH are untouched
+
+The accepted UI identity registers /home/admin/satgs-native-ui-20261111-app-manager. The retained runtime identity registers /home/admin/satgs-runtime-20261110-app-manager. The guide candidate has its own reviewed setup identity and explicit guide selection; it does not silently change the meaning of ui. These technical paths are not manual operator launch prerequisites. The dispatch wrappers resolve the selected environment without activating it.
+
+source launchers/setup_daily.sh --select ui selects the registered accepted UI and shared workspace. It does not click the menu, open a window, initialize station data, choose a component profile, select a replay/live source or prove hardware readiness. The guide candidate's --select guide follows the same separation after candidate acceptance. The GUI and CLI wrappers both load the shared selection and supply its workspace to the chosen installed entry point. An explicit --workspace overrides only that invocation.
+
+Declared Science category and source-correct Exec are verifiable locally. The remaining Pi observation is an actual SATGS menu click in the user's graphical session, confirmation of that desktop's displayed submenu and the opened saved station. A report that setup printed a menu item, or a separate runner exited zero, is not evidence that the menu was clicked. SSH-only users should use CLI documentation rather than force a display/session permission.
+Offline documentation build and packaging
+
+Five canonical Markdown chapters under ground_station/docs produce one linked satgs/data/user-guide.html, one user-guide.txt, local user-guide.css and a deterministic user-guide-manifest.json. One unchanged actual accepted native Setup screenshot is packaged as user-guide-setup.png; its caption distinguishes the controlled host capture from Pi and new Help-action evidence. Its source and output bytes are bound in the manifest. The builder supports the small source subset used here: headings, paragraphs, code fences, tables, lists and explicit links. It escapes source text, checks internal links, and requires no external Markdown library. The package build calls it through the existing build_py flow. The compiler stays in source/build tooling, outside runtime imports.
+
+The manifest records relative canonical source names/hashes, selected package version and output hashes. It omits current timestamps and local checkout paths so identical source/version produces identical resources. HTML uses system fonts, local CSS, semantic headings/landmarks, a skip link, visible focus, scrollable tables and print styling. It has no scripts, analytics or remote assets. The terminal edition retains exact code examples, screenshot alternative text and the provenance caption without HTML markup or image bytes.
+
+Installed lookup is relative to the selected satgs package, never current directory, Downloads or a source checkout. The same wheel carries the content opened by CLI and Help. Older installations keep their own guide, if they have one; selecting this release does not search for a newer manual on a moving branch. Documentation-only paths avoid workspace/configuration loaders and optional owner stacks. Default-viewer dispatch uses a known local executable and argument array, never a shell command, BROWSER string, pager or server.
+Validation and evidence interpretation
+
+The accompanying candidate acceptance report is the authority for commands actually executed, installed origins, assertions and artifacts. Review these distinct checks: fresh wheel resources outside checkout; all three docs forms; missing/invalid station; wrong working directory; paths with spaces; old/new installed resources; headless/SSH/text; viewer success/failure/timeout; and documentation-only imports with effects denied. A controlled viewer substitution tests dispatch mechanics, not the desktop's rendered content.
+
+The native check must invoke the real Help callback with real widgets, preserve unsaved draft/result/tab state, demonstrate event-loop responsiveness and retain owned cleanup. Content checks compare CLI parser/options and current widget labels, validate internal links/assets and execute worked examples only in new private workspaces under the existing guards. Legacy broker/hardware commands remain source reviewed. Prior Pi/native/telemetry evidence is retained without rerunning unrelated historical suites or attributing its PASS to changed bytes.
+
+If a current capability is implemented but not target-tested, report that exact state. Do not convert an operator-observed PASS into a new independent run, or call a source-reviewed command an executed example. Reports keep software completion, submission and physical state separate.
+Update, selection and rollback
+
+Use the candidate's supplied side-by-side setup command and consolidated acceptance command. They reuse retained offline dependency inputs and create separate candidate environments. They do not patch accepted site-packages, move virtual environments, reset the saved station or select a release merely because setup succeeded. Candidate selection is explicit after reviewed acceptance.
+
+If the candidate is rejected, retain the prior selection. If an already selected candidate must be rolled back, use the retained reviewed launcher setup to select the previous accepted identity (ui for the accepted native UI, or the specifically approved runtime identity). Preserve environments, workspaces, partial results and evidence. Rollback is selection, not deletion or a claim of physical stopping. No database migration or workspace schema conversion is introduced by the guide feature.
