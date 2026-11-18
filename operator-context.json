@@ -10,6 +10,6 @@
   "outer_interpreter": "/usr/bin/python3.11",
   "owned_host_display_fixture": false,
   "schema": "operator-launch-context.v1",
-  "selected_application": "/home/admin/satgs-user-guide-20261112-app-manager",
-  "start_utc": "2026-11-12T14:14:46.562743+00:00"
+  "selected_application": "/home/admin/satgs-jog-20261118-v2-app-manager",
+  "start_utc": "2026-11-17T19:06:55.807980+00:00"
 }
