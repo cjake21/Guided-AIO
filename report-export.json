@@ -1,0 +1,5683 @@
+{
+  "accepted_baseline_commit": "280fb4a8dc11efa35c190c27ebb147e5a2db689b",
+  "bench_results": [
+    {
+      "attempt_id": "06b36f092b8b4545ba681f7f7c22296d",
+      "binding": "c5c6b4829d29c893d44d00721b11b0926876c196ec1a37262e2be6d8d1edc1d3",
+      "category": "deadline",
+      "elapsed_seconds": 1.0071653140003036,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2906.875604765,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2905.89582595,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2906.876373246,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 100.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "e2bc6784c635e812d2cf977ecf8c8217df2a4f2019f8a7235a47a4d101f63f45",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2905.869207932,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "06b36f092b8b4545ba681f7f7c22296d",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "e2bc6784c635e812d2cf977ecf8c8217df2a4f2019f8a7235a47a4d101f63f45",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2905.869207932,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "09facf6c080244ec8141afdee9864b1b",
+      "binding": "c5c6b4829d29c893d44d00721b11b0926876c196ec1a37262e2be6d8d1edc1d3",
+      "category": "deadline",
+      "elapsed_seconds": 1.0065323519997946,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 3060.182779044,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 3059.203480174,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 3060.183259507,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 100.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "e2bc6784c635e812d2cf977ecf8c8217df2a4f2019f8a7235a47a4d101f63f45",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 3059.176727155,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "09facf6c080244ec8141afdee9864b1b",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "e2bc6784c635e812d2cf977ecf8c8217df2a4f2019f8a7235a47a4d101f63f45",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 3059.176727155,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "194cd10256334104ab2c9801c5820cb3",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "deadline",
+      "elapsed_seconds": 1.0071039799950086,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 77851.939115001,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 77850.968338946,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 77851.939783538,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 77850.932679558,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "194cd10256334104ab2c9801c5820cb3",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 77850.932679558,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "1c527f58ff1449db883c7860f7b2c3d9",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "policy_mismatch",
+      "elapsed_seconds": 0.007684869997319765,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [],
+      "finished_monotonic": 78002.112440782,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 78002.104755912,
+      "started_recorded": true,
+      "state": "inactive",
+      "status_bytes": "",
+      "submission": "none",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "1c527f58ff1449db883c7860f7b2c3d9",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 78002.104755912,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "21a7ee13413f4a94b239f61f09165dc0",
+      "binding": "c89bc8465fc5849485f796d0e58963c7de0395a78a83329caccbf18a3cff641e",
+      "category": "deadline",
+      "elapsed_seconds": 1.0070739439997851,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2513.431425721,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2512.460053944,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2513.43211987,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "mode": "query-only",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": true,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "model": "QPT130",
+        "observation_max_age_seconds": 5,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-readback-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "7e9b9dffbd7df6420068c054ba6594a5277e11018f7d46740de2eed931151401"
+      },
+      "sequence": 1,
+      "started_monotonic": 2512.425045926,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "21a7ee13413f4a94b239f61f09165dc0",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": true,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "model": "QPT130",
+        "observation_max_age_seconds": 5,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-readback-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "7e9b9dffbd7df6420068c054ba6594a5277e11018f7d46740de2eed931151401"
+      },
+      "started_monotonic": 2512.425045926,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "262a961fccb64d0b94e3d10b05e272e6",
+      "binding": "1896e6bdf023711122e2ffddfb29c3b9c721ad4117276c167a2145f0e101d4c9",
+      "category": "deadline",
+      "elapsed_seconds": 1.0068460000002233,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2659.138247709,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2658.158468043,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2659.138906135,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 1.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2658.132060135,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "262a961fccb64d0b94e3d10b05e272e6",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2658.132060135,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "3618ec7d4a0d41e1b7ee68bf672c11cc",
+      "binding": "1896e6bdf023711122e2ffddfb29c3b9c721ad4117276c167a2145f0e101d4c9",
+      "category": "deadline",
+      "elapsed_seconds": 1.0114522029998625,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2668.151587555,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2667.172255315,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2668.152268296,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 1.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2667.140816093,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "3618ec7d4a0d41e1b7ee68bf672c11cc",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2667.140816093,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "37626eaafecb4109a57992b4b1246fe1",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "policy_mismatch",
+      "elapsed_seconds": 0.007474017998902127,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [],
+      "finished_monotonic": 77997.812997951,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 77997.805523933,
+      "started_recorded": true,
+      "state": "inactive",
+      "status_bytes": "",
+      "submission": "none",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "37626eaafecb4109a57992b4b1246fe1",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 77997.805523933,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "43617a7ff1e946e78af76dca82096743",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "deadline",
+      "elapsed_seconds": 1.0069162030122243,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 78822.860637626,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 78821.881030664,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 78822.861192719,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 78821.854276516,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "43617a7ff1e946e78af76dca82096743",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 78821.854276516,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "544ae186c2894433905e477f5dfb73ea",
+      "binding": "59aedb22d6ec0061f4084f5663726bd4449e7bc9a644853e4ae5acfe7231e3e0",
+      "category": "deadline",
+      "elapsed_seconds": 1.009313665999798,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 3546.473252939,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 3545.492771254,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 3546.473939513,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 100.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "caad0232b099968c7a43822d4c8fe1f4ea2b45ed1ea3d37897abea5cc29c3aa2",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 3545.464625847,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "544ae186c2894433905e477f5dfb73ea",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "caad0232b099968c7a43822d4c8fe1f4ea2b45ed1ea3d37897abea5cc29c3aa2",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 3545.464625847,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "5884ba3fe7324d33a0430944610f6799",
+      "binding": "1896e6bdf023711122e2ffddfb29c3b9c721ad4117276c167a2145f0e101d4c9",
+      "category": "deadline",
+      "elapsed_seconds": 1.0071492590000162,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2978.362177685,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2977.38357026,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2978.362928,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 1.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2977.355778741,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "5884ba3fe7324d33a0430944610f6799",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2977.355778741,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "6b701adb67924d66b1066f4f601d9318",
+      "binding": "c89bc8465fc5849485f796d0e58963c7de0395a78a83329caccbf18a3cff641e",
+      "category": "deadline",
+      "elapsed_seconds": 1.007255313999849,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 3128.220152892,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 3127.24135393,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 3128.220598633,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "mode": "query-only",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": true,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "model": "QPT130",
+        "observation_max_age_seconds": 5,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-readback-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "7e9b9dffbd7df6420068c054ba6594a5277e11018f7d46740de2eed931151401"
+      },
+      "sequence": 1,
+      "started_monotonic": 3127.213343319,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "6b701adb67924d66b1066f4f601d9318",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": true,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "model": "QPT130",
+        "observation_max_age_seconds": 5,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-readback-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "7e9b9dffbd7df6420068c054ba6594a5277e11018f7d46740de2eed931151401"
+      },
+      "started_monotonic": 3127.213343319,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "73848d89fe804b60b63077631f3f4fa1",
+      "binding": "c5c6b4829d29c893d44d00721b11b0926876c196ec1a37262e2be6d8d1edc1d3",
+      "category": "deadline",
+      "elapsed_seconds": 1.0090301099999124,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2730.919718296,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2729.940054389,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2730.920290536,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 100.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "e2bc6784c635e812d2cf977ecf8c8217df2a4f2019f8a7235a47a4d101f63f45",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2729.911260426,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "73848d89fe804b60b63077631f3f4fa1",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "e2bc6784c635e812d2cf977ecf8c8217df2a4f2019f8a7235a47a4d101f63f45",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2729.911260426,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "74d4b451112f42f5baf6f378d37ff543",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "deadline",
+      "elapsed_seconds": 1.0067118510050932,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 77528.174806268,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 77527.195684436,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 77528.175382546,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 77527.168670695,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "74d4b451112f42f5baf6f378d37ff543",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 77527.168670695,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "784714a965c2412dbcab87e43adb6683",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "deadline",
+      "elapsed_seconds": 1.0095380550046684,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 77476.48365217,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 77475.503275096,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 77476.484523855,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 77475.4749858,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "784714a965c2412dbcab87e43adb6683",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 77475.4749858,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "79c1fa69e789454b9cd87a1d5a612054",
+      "binding": "6e12a7196a3ec4f157ed61f11be74ba8f333129437639cf4b9e1dcb9a04b0239",
+      "category": "deadline",
+      "elapsed_seconds": 1.0090882210001837,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2690.983010245,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2690.003191283,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2690.983526634,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 10.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 10.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "ed2dc300a34bccdcdc1c0edf389f07f60963734e788daec4c4e1433bad858b2c",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2689.974438413,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "79c1fa69e789454b9cd87a1d5a612054",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 10.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "ed2dc300a34bccdcdc1c0edf389f07f60963734e788daec4c4e1433bad858b2c",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2689.974438413,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "8e3692b32dc64ba5b84cbe33826d3b14",
+      "binding": "1896e6bdf023711122e2ffddfb29c3b9c721ad4117276c167a2145f0e101d4c9",
+      "category": "deadline",
+      "elapsed_seconds": 1.0119506099999853,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2650.171373936,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2649.192464103,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2650.172073325,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 1.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2649.160122715,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "8e3692b32dc64ba5b84cbe33826d3b14",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2649.160122715,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "a1fd67839c604db49e22f07958515fbf",
+      "binding": "59aedb22d6ec0061f4084f5663726bd4449e7bc9a644853e4ae5acfe7231e3e0",
+      "category": "deadline",
+      "elapsed_seconds": 1.0067533330002334,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 3421.807299347,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 3420.826931199,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 3421.807804643,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 100.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "caad0232b099968c7a43822d4c8fe1f4ea2b45ed1ea3d37897abea5cc29c3aa2",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 3420.80105131,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "a1fd67839c604db49e22f07958515fbf",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 100.0,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "caad0232b099968c7a43822d4c8fe1f4ea2b45ed1ea3d37897abea5cc29c3aa2",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 3420.80105131,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "ab1c88b622bc45eaaa9a8069a92fe243",
+      "binding": "1896e6bdf023711122e2ffddfb29c3b9c721ad4117276c167a2145f0e101d4c9",
+      "category": "deadline",
+      "elapsed_seconds": 1.007481980999728,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 3047.042938829,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 3046.063863608,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 3047.043746163,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 1.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 3046.036264182,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "ab1c88b622bc45eaaa9a8069a92fe243",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 1.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "6625a1ee2e5b142a7377ad4d6d03a6da67f2e8fa9e5da99d9d78294bc5ddff42",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 3046.036264182,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "ecb4609625e34988b41223ca30df82f5",
+      "binding": "6e12a7196a3ec4f157ed61f11be74ba8f333129437639cf4b9e1dcb9a04b0239",
+      "category": "deadline",
+      "elapsed_seconds": 1.0069062030001987,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 2985.140477014,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 2984.161515533,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 2985.141103292,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 10.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 10.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "ed2dc300a34bccdcdc1c0edf389f07f60963734e788daec4c4e1433bad858b2c",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 2984.134197089,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "ecb4609625e34988b41223ca30df82f5",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 10.0,
+        "model": "QPT130",
+        "no_go_rectangle": {
+          "pan_max": -30.0,
+          "pan_min": -70.0,
+          "tilt_max": -60.0,
+          "tilt_min": -90.0
+        },
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "ed2dc300a34bccdcdc1c0edf389f07f60963734e788daec4c4e1433bad858b2c",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 2984.134197089,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "ef6023a30f804a079a2f17121ed443a6",
+      "binding": "cb2ff8fd872e08593de0365360c608ca54acdf3d170250c508669a8045b467e4",
+      "category": "deadline",
+      "elapsed_seconds": 1.0067021660070168,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 78017.53428418,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 78016.566453181,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 78017.534826125,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "max_change_degrees": 360.0,
+      "mode": "manual",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "pan_max": 215.0,
+      "pan_min": -215.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "sequence": 1,
+      "started_monotonic": 78016.528123959,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "tilt_max": 0.0,
+      "tilt_min": -90.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "ef6023a30f804a079a2f17121ed443a6",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": false,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+jog.20261118.3",
+          "satgs": "0.0.1+jog.20261118.3",
+          "serialptu": "0.0.1+jog.20261118.3",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "frame": "mechanical-pan-tilt-degrees.v1",
+        "max_change_degrees": 360,
+        "model": "QPT130",
+        "no_go_rectangle": null,
+        "observation_max_age_seconds": 5,
+        "pan_max": 215,
+        "pan_min": -215,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-manual-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "498a68dbf9033e3dc8844f48a9345dce830dc31f861c22afc719518e71745a26",
+        "tilt_max": 0,
+        "tilt_min": -90
+      },
+      "started_monotonic": 78016.528123959,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "f41e8500bf124ceeb8688ec78d4a9236",
+      "binding": "c89bc8465fc5849485f796d0e58963c7de0395a78a83329caccbf18a3cff641e",
+      "category": "deadline",
+      "elapsed_seconds": 1.0072374440001113,
+      "encoded_pan_units": 0,
+      "encoded_tilt_units": 0,
+      "equipment_label": "Pelican QPT130",
+      "exchanges": [
+        {
+          "category": "deadline",
+          "finished_monotonic": 3171.659237755,
+          "operation": "status",
+          "request": "023100000000003103",
+          "response": "",
+          "response_truncated": false,
+          "sequence": 1,
+          "started_monotonic": 3170.68114533,
+          "submission": "complete",
+          "timing_reference": "owner-process-monotonic",
+          "written": 9
+        }
+      ],
+      "finished_monotonic": 3171.659782311,
+      "frame": "mechanical-pan-tilt-degrees.v1",
+      "has_observation": false,
+      "manager_id": 1,
+      "mode": "query-only",
+      "observation_sequence": 0,
+      "observed_at": null,
+      "operation": "connect",
+      "operation_code": 1,
+      "pan": 0.0,
+      "partial": false,
+      "physical_state": "unobserved",
+      "position_reference": "protocol-reported-unqualified",
+      "possible_motion": false,
+      "preview_sequence": 0,
+      "ptu_id": 1,
+      "query_only": true,
+      "record_kind": "result",
+      "recorded": true,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "requested_pan": 0.0,
+      "requested_tilt": 0.0,
+      "result_present": true,
+      "result_recorded": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "model": "QPT130",
+        "observation_max_age_seconds": 5,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-readback-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "7e9b9dffbd7df6420068c054ba6594a5277e11018f7d46740de2eed931151401"
+      },
+      "sequence": 1,
+      "started_monotonic": 3170.652544867,
+      "started_recorded": true,
+      "state": "connected",
+      "status_bytes": "",
+      "submission": "complete",
+      "tilt": 0.0,
+      "transport": "local-serial",
+      "units_per_degree": 10,
+      "wall_clock_quality": "unconfirmed"
+    },
+    {
+      "attempt_id": "f41e8500bf124ceeb8688ec78d4a9236",
+      "operation": "connect",
+      "physical_state": "indeterminate",
+      "ptu_id": 1,
+      "query_only": true,
+      "record_kind": "started",
+      "recording_deferred": false,
+      "release_identity": {
+        "distributions": {
+          "meteor_api": "2.2.0+bench.20261117.1",
+          "pixhawk": "0.0.1",
+          "ptu_control": "0.0.1+bench.20261118.1",
+          "satgs": "0.0.1+bench.20261118.1",
+          "serialptu": "0.0.1+bench.20261117.1",
+          "stomp.py": "8.1.0+bench.20261117.1"
+        },
+        "evidence": "package_metadata_only"
+      },
+      "result_present": true,
+      "schema": "satgs-bench-operation.v1",
+      "selected_context": {
+        "device_identity": {
+          "driver": "pl2303",
+          "interface_number": "00",
+          "product_id": "23a3",
+          "serial_number": "EBCUb14C705",
+          "vendor_id": "067b"
+        },
+        "equipment_label": "Pelican QPT130",
+        "exchange_timeout_seconds": 1,
+        "model": "QPT130",
+        "observation_max_age_seconds": 5,
+        "protocol": "PTCR20",
+        "protocol_address": null,
+        "schema": "ptu-readback-context.v1",
+        "serial_settings": {
+          "baudrate": 9600,
+          "bytesize": 8,
+          "dsrdtr": false,
+          "dtr": true,
+          "parity": "N",
+          "port": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_EBCUb14C705-if00-port0",
+          "rts": true,
+          "rtscts": false,
+          "stopbits": 1,
+          "xonxoff": false
+        },
+        "session_id": "7e9b9dffbd7df6420068c054ba6594a5277e11018f7d46740de2eed931151401"
+      },
+      "started_monotonic": 3170.652544867,
+      "transport": "local-serial",
+      "wall_clock_quality": "unconfirmed"
+    }
+  ],
+  "capabilities": {
+    "activate": false,
+    "hardware_control": false,
+    "install": false,
+    "local_planning": true,
+    "manual_location": true,
+    "report_export": true
+  },
+  "case": "pelican-qpt130",
+  "configuration": {
+    "host_roles": [
+      "controller",
+      "pointing_controller",
+      "rf_controller"
+    ],
+    "id": "full_msel",
+    "instances": [],
+    "preset": "full_msel",
+    "release_id": null,
+    "revision": 1,
+    "schema_version": 1,
+    "selections": [
+      {
+        "component": "broker.activemq",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "system"
+      },
+      {
+        "component": "cyberpowerpdu",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "dsi_instruments",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "execution.pass_runner",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "ground_station",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "meteor-api",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "msel_post_processing",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "orbit.pass_finder",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "orchestration.queue_manager",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "pixhawk",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "pointing.dual_gps",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "station_hardware"
+      },
+      {
+        "component": "pointing.pixhawk",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "pointing.ptu",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "pointing.qpt130",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "station_hardware"
+      },
+      {
+        "component": "power.pdu_hpa",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "processing.msel_post_processing",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "recording.signal_hound",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "rf.frontend",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "sat_tracker",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "serialptu",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "signal_hound",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "signal_hound_native_wrapper",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "time.ntp",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "system"
+      }
+    ],
+    "target": {
+      "environment": "unknown",
+      "id": "unspecified"
+    }
+  },
+  "deployment_plan": {
+    "apply_supported": false,
+    "blocked": false,
+    "candidate_release_id": null,
+    "complete": false,
+    "configuration": {
+      "host_roles": [
+        "controller",
+        "pointing_controller",
+        "rf_controller"
+      ],
+      "id": "full_msel",
+      "instances": [],
+      "preset": "full_msel",
+      "release_id": null,
+      "revision": 1,
+      "schema_version": 1,
+      "selections": [
+        {
+          "component": "broker.activemq",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "system"
+        },
+        {
+          "component": "cyberpowerpdu",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "dsi_instruments",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "execution.pass_runner",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "ground_station",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "meteor-api",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "msel_post_processing",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "orbit.pass_finder",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "orchestration.queue_manager",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "pixhawk",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "pointing.dual_gps",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "station_hardware"
+        },
+        {
+          "component": "pointing.pixhawk",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "pointing.ptu",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "pointing.qpt130",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "station_hardware"
+        },
+        {
+          "component": "power.pdu_hpa",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "processing.msel_post_processing",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "recording.signal_hound",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "rf.frontend",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "satgs"
+        },
+        {
+          "component": "sat_tracker",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "serialptu",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "signal_hound",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "signal_hound_native_wrapper",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "repository"
+        },
+        {
+          "component": "time.ntp",
+          "instance_ids": [],
+          "mode": "install",
+          "provider": "system"
+        }
+      ],
+      "target": {
+        "environment": "unknown",
+        "id": "unspecified"
+      }
+    },
+    "derived_requirements": [
+      {
+        "component": "broker.activemq",
+        "reasons": [
+          {
+            "relationship": "operational-service",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/src/satgs/queue_manager.py:900"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "pointing.pixhawk",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:350"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "pointing.ptu",
+            "source": "sat_tracker/src/ptu_control/ptu_client.py:476"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "power.pdu_hpa",
+            "source": "cyberpowerpdu/src/cyberpowerpdu/pdu_manager.py:278"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "recording.signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:561"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "rf.frontend",
+            "source": "dsi_instruments/src/dsi/front_end_manager.py:374"
+          }
+        ]
+      },
+      {
+        "component": "cyberpowerpdu",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "power.pdu_hpa",
+            "source": "ground_station/etc/systemd/cyberpower_pdu.service:7"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "power.pdu_hpa",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_pdu"
+          }
+        ]
+      },
+      {
+        "component": "dsi_instruments",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "rf.frontend",
+            "source": "ground_station/etc/systemd/frontend.service:7"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "rf.frontend",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_frontend"
+          }
+        ]
+      },
+      {
+        "component": "ground_station",
+        "reasons": [
+          {
+            "relationship": "module-owner",
+            "required_by": "execution.pass_runner",
+            "source": "ground_station/src/satgs/pass_runner.py"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "msel_post_processing",
+            "source": "msel_post_processing/src/post_processing/quick_look.py:24-27"
+          },
+          {
+            "relationship": "module-owner",
+            "required_by": "orbit.pass_finder",
+            "source": "ground_station/src/satgs/pass_finder.py"
+          },
+          {
+            "relationship": "service-program",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/etc/systemd/ground_station.service:9"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "pixhawk",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:18"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "sat_tracker",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:31-32"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:19"
+          }
+        ]
+      },
+      {
+        "component": "meteor-api",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "cyberpowerpdu",
+            "source": "cyberpowerpdu/src/cyberpowerpdu/pdu_manager.py:8"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "dsi_instruments",
+            "source": "dsi_instruments/src/dsi/front_end_manager.py:17"
+          },
+          {
+            "relationship": "python-declaration",
+            "required_by": "ground_station",
+            "source": "ground_station/pyproject.toml:8"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "pixhawk",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:9"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "sat_tracker",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:17-19"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:18"
+          }
+        ]
+      },
+      {
+        "component": "msel_post_processing",
+        "reasons": [
+          {
+            "relationship": "module-owner",
+            "required_by": "processing.msel_post_processing",
+            "source": "msel_post_processing/pyproject.toml:53-57"
+          }
+        ]
+      },
+      {
+        "component": "pixhawk",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "pointing.pixhawk",
+            "source": "ground_station/etc/systemd/pixhawk.service"
+          }
+        ]
+      },
+      {
+        "component": "pointing.pixhawk",
+        "reasons": [
+          {
+            "relationship": "managed-hardware",
+            "required_by": "pointing.dual_gps",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:87-90"
+          }
+        ]
+      },
+      {
+        "component": "pointing.ptu",
+        "reasons": [
+          {
+            "relationship": "managed-hardware",
+            "required_by": "pointing.qpt130",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:1018-1054"
+          }
+        ]
+      },
+      {
+        "component": "processing.msel_post_processing",
+        "reasons": [
+          {
+            "relationship": "required-operation",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/src/satgs/queue_manager.py:773-779"
+          }
+        ]
+      },
+      {
+        "component": "recording.signal_hound",
+        "reasons": [
+          {
+            "relationship": "required-operation",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/src/satgs/queue_manager.py:739-740"
+          }
+        ]
+      },
+      {
+        "component": "sat_tracker",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "msel_post_processing",
+            "source": "msel_post_processing/src/post_processing/quick_look.py:24-27"
+          },
+          {
+            "relationship": "service-program",
+            "required_by": "pointing.ptu",
+            "source": "ground_station/etc/systemd/ptu.service"
+          }
+        ]
+      },
+      {
+        "component": "serialptu",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "sat_tracker",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:17-19"
+          }
+        ]
+      },
+      {
+        "component": "signal_hound",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "recording.signal_hound",
+            "source": "ground_station/etc/systemd/sh_iq_logger.service:8"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "recording.signal_hound",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_iq_recorder"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "recording.signal_hound",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_trace_logger"
+          }
+        ]
+      },
+      {
+        "component": "signal_hound_native_wrapper",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "recording.signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:20"
+          }
+        ]
+      }
+    ],
+    "diagnostics": [
+      {
+        "code": "closure_incomplete",
+        "component": null,
+        "message": "Python dependencies, native/build artifacts and publisher trust are not resolved or verified.",
+        "severity": "warning"
+      },
+      {
+        "code": "commissioning_required",
+        "component": null,
+        "message": "Broker readiness, synchronized time, architecture compatibility and physical commissioning are unverified.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "broker.activemq",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "cyberpowerpdu",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "dsi_instruments",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "execution.pass_runner",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "ground_station",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "meteor-api",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "msel_post_processing",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "orbit.pass_finder",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "orchestration.queue_manager",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "pixhawk",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "pointing.dual_gps",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "pointing.pixhawk",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "pointing.ptu",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "pointing.qpt130",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "power.pdu_hpa",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "processing.msel_post_processing",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "recording.signal_hound",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "rf.frontend",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "sat_tracker",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "serialptu",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "signal_hound",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "signal_hound_native_wrapper",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "inventory_unknown",
+        "component": "time.ntp",
+        "message": "Presence is unknown; no discovery or successful verification is implied.",
+        "severity": "warning"
+      },
+      {
+        "code": "runtime_cycles",
+        "component": null,
+        "message": "Source package cycles ground_station <-> sat_tracker and ground_station <-> pixhawk remain unresolved; owner contracts and target runtime integration remain unverified.",
+        "severity": "warning"
+      }
+    ],
+    "inventory_id": null,
+    "operation": "plan",
+    "outcomes": [
+      {
+        "component": "broker.activemq",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "system",
+        "reasons": [
+          {
+            "relationship": "operational-service",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/src/satgs/queue_manager.py:900"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "pointing.pixhawk",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:350"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "pointing.ptu",
+            "source": "sat_tracker/src/ptu_control/ptu_client.py:476"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "power.pdu_hpa",
+            "source": "cyberpowerpdu/src/cyberpowerpdu/pdu_manager.py:278"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "recording.signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:561"
+          },
+          {
+            "relationship": "operational-service",
+            "required_by": "rf.frontend",
+            "source": "dsi_instruments/src/dsi/front_end_manager.py:374"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "cyberpowerpdu",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "power.pdu_hpa",
+            "source": "ground_station/etc/systemd/cyberpower_pdu.service:7"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "power.pdu_hpa",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_pdu"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "dsi_instruments",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "rf.frontend",
+            "source": "ground_station/etc/systemd/frontend.service:7"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "rf.frontend",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_frontend"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "execution.pass_runner",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "ground_station",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "module-owner",
+            "required_by": "execution.pass_runner",
+            "source": "ground_station/src/satgs/pass_runner.py"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "msel_post_processing",
+            "source": "msel_post_processing/src/post_processing/quick_look.py:24-27"
+          },
+          {
+            "relationship": "module-owner",
+            "required_by": "orbit.pass_finder",
+            "source": "ground_station/src/satgs/pass_finder.py"
+          },
+          {
+            "relationship": "service-program",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/etc/systemd/ground_station.service:9"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "pixhawk",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:18"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "sat_tracker",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:31-32"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:19"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "meteor-api",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "cyberpowerpdu",
+            "source": "cyberpowerpdu/src/cyberpowerpdu/pdu_manager.py:8"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "dsi_instruments",
+            "source": "dsi_instruments/src/dsi/front_end_manager.py:17"
+          },
+          {
+            "relationship": "python-declaration",
+            "required_by": "ground_station",
+            "source": "ground_station/pyproject.toml:8"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "pixhawk",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:9"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "sat_tracker",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:17-19"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:18"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "msel_post_processing",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "module-owner",
+            "required_by": "processing.msel_post_processing",
+            "source": "msel_post_processing/pyproject.toml:53-57"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "orbit.pass_finder",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "orchestration.queue_manager",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "pixhawk",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "pointing.pixhawk",
+            "source": "ground_station/etc/systemd/pixhawk.service"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "pointing.dual_gps",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "commissioning_required",
+        "presence": "unknown",
+        "provider": "station_hardware",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "pointing.pixhawk",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [
+          {
+            "relationship": "managed-hardware",
+            "required_by": "pointing.dual_gps",
+            "source": "pixhawk/src/pixhawk/pixhawk_manager.py:87-90"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "pointing.ptu",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [
+          {
+            "relationship": "managed-hardware",
+            "required_by": "pointing.qpt130",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:1018-1054"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "pointing.qpt130",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "commissioning_required",
+        "presence": "unknown",
+        "provider": "station_hardware",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "power.pdu_hpa",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "processing.msel_post_processing",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [
+          {
+            "relationship": "required-operation",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/src/satgs/queue_manager.py:773-779"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "recording.signal_hound",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [
+          {
+            "relationship": "required-operation",
+            "required_by": "orchestration.queue_manager",
+            "source": "ground_station/src/satgs/queue_manager.py:739-740"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "rf.frontend",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "satgs",
+        "reasons": [],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "sat_tracker",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "msel_post_processing",
+            "source": "msel_post_processing/src/post_processing/quick_look.py:24-27"
+          },
+          {
+            "relationship": "service-program",
+            "required_by": "pointing.ptu",
+            "source": "ground_station/etc/systemd/ptu.service"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "serialptu",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "sat_tracker",
+            "source": "sat_tracker/src/ptu_control/ptu_manager.py:17-19"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "signal_hound",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "service-program",
+            "required_by": "recording.signal_hound",
+            "source": "ground_station/etc/systemd/sh_iq_logger.service:8"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "recording.signal_hound",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_iq_recorder"
+          },
+          {
+            "relationship": "source-import",
+            "required_by": "recording.signal_hound",
+            "source": "ground_station/src/satgs/pass_runner.py:PassRunner._initialize_trace_logger"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "signal_hound_native_wrapper",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "repository",
+        "reasons": [
+          {
+            "relationship": "source-import",
+            "required_by": "recording.signal_hound",
+            "source": "signal_hound/src/signal_hound_control/sh_manager.py:20"
+          }
+        ],
+        "runtime_state": "unknown"
+      },
+      {
+        "component": "time.ntp",
+        "derived": false,
+        "instance_ids": [],
+        "mode": "install",
+        "outcome": "proposed_install",
+        "presence": "unknown",
+        "provider": "system",
+        "reasons": [],
+        "runtime_state": "unknown"
+      }
+    ],
+    "planning_only": true,
+    "preset_definition": {
+      "apply_supported": true,
+      "capabilities": [
+        {
+          "applicability": "included",
+          "id": "broker.activemq",
+          "instance_ids": [],
+          "provider": "system",
+          "required_by_default": true,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "orchestration.queue_manager",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": true,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "execution.pass_runner",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": true,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "orbit.pass_finder",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": true,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "pointing.ptu",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "pointing.qpt130",
+          "instance_ids": [],
+          "provider": "station_hardware",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "pointing.pixhawk",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "pointing.dual_gps",
+          "instance_ids": [],
+          "provider": "station_hardware",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "time.ntp",
+          "instance_ids": [],
+          "provider": "system",
+          "required_by_default": true,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "rf.frontend",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "power.pdu_hpa",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "recording.signal_hound",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": false,
+          "supported": true
+        },
+        {
+          "applicability": "included",
+          "id": "processing.msel_post_processing",
+          "instance_ids": [],
+          "provider": "satgs",
+          "required_by_default": false,
+          "supported": true
+        }
+      ],
+      "display_name": "Full M-SEL",
+      "host_roles": [
+        "controller",
+        "pointing_controller",
+        "rf_controller"
+      ],
+      "id": "full_msel",
+      "instances": [],
+      "packages": [
+        {
+          "id": "meteor-api",
+          "install_mode": "editable",
+          "path": "lib/meteor-api"
+        },
+        {
+          "id": "ground_station",
+          "install_mode": "editable",
+          "path": "."
+        },
+        {
+          "id": "msel_post_processing",
+          "install_mode": "editable",
+          "path": "lib/msel_post_processing"
+        },
+        {
+          "id": "cyberpowerpdu",
+          "install_mode": "editable",
+          "path": "lib/cyberpowerpdu"
+        },
+        {
+          "id": "dsi_instruments",
+          "install_mode": "editable",
+          "path": "lib/dsi_instruments"
+        },
+        {
+          "id": "pixhawk",
+          "install_mode": "editable",
+          "path": "lib/pixhawk"
+        },
+        {
+          "id": "sat_tracker",
+          "install_mode": "editable",
+          "path": "lib/sat_tracker"
+        },
+        {
+          "id": "serialptu",
+          "install_mode": "editable",
+          "path": "lib/sat_tracker/lib/serialptu"
+        },
+        {
+          "id": "signal_hound",
+          "install_mode": "editable",
+          "path": "lib/signal_hound"
+        },
+        {
+          "id": "signal_hound_native_wrapper",
+          "install_mode": "standard",
+          "path": "lib/signal_hound/lib"
+        }
+      ],
+      "services": [
+        {
+          "host_roles": [
+            "controller"
+          ],
+          "id": "broker.activemq",
+          "provider": "system",
+          "unit": "activemq.service"
+        },
+        {
+          "host_roles": [
+            "controller"
+          ],
+          "id": "power.pdu_hpa",
+          "provider": "satgs",
+          "unit": "cyberpower_pdu.service"
+        },
+        {
+          "host_roles": [
+            "rf_controller"
+          ],
+          "id": "rf.frontend",
+          "provider": "satgs",
+          "unit": "frontend.service"
+        },
+        {
+          "host_roles": [
+            "pointing_controller"
+          ],
+          "id": "pointing.ptu",
+          "provider": "satgs",
+          "unit": "ptu.service"
+        },
+        {
+          "host_roles": [
+            "pointing_controller"
+          ],
+          "id": "pointing.pixhawk",
+          "provider": "satgs",
+          "unit": "pixhawk.service"
+        },
+        {
+          "host_roles": [
+            "controller"
+          ],
+          "id": "rf.loopback",
+          "provider": "satgs",
+          "unit": "rf_loopback.service"
+        },
+        {
+          "host_roles": [
+            "controller"
+          ],
+          "id": "recording.signal_hound_iq",
+          "provider": "satgs",
+          "unit": "sh_iq_logger.service"
+        },
+        {
+          "host_roles": [
+            "controller"
+          ],
+          "id": "recording.signal_hound_trace",
+          "provider": "satgs",
+          "unit": "sh_trace_logger.service"
+        },
+        {
+          "host_roles": [
+            "controller"
+          ],
+          "id": "orchestration.queue_manager",
+          "provider": "satgs",
+          "unit": "ground_station.service"
+        }
+      ]
+    },
+    "schema_version": 1
+  },
+  "effective_location": {
+    "altitude_m": 12.0,
+    "altitude_qualified": false,
+    "altitude_reference": "unspecified",
+    "altitude_unit": "metres",
+    "identity": "8f967a38d36bae1437e40d8c946e036b67cf5bcf8f39dc001138347839aa4981",
+    "latitude_deg": 55.0,
+    "latitude_unit": "degrees",
+    "longitude_deg": 55.0,
+    "longitude_unit": "degrees",
+    "planning_identity": "8ca75c08e9aaa9c8ef02401680dea03905c22381edabf804635eaa0bf9d3c5fe",
+    "reference_provenance": "operator_declared_not_measured",
+    "source": "manual"
+  },
+  "generation": 8,
+  "gps_selection": {
+    "enabled": false,
+    "unmet_requirements": [
+      "No admitted measured GPS source is connected to this offline workspace.",
+      "Fix validity and source identity are not established for station selection.",
+      "Observation time and the required freshness policy are not established.",
+      "Horizontal and altitude coordinate references and conversion are not established."
+    ]
+  },
+  "historical_baseline": "carried_forward_separate_evidence",
+  "installed_identity": {
+    "distributions": {
+      "meteor_api": "2.2.0+bench.20261117.1",
+      "pixhawk": "0.0.1",
+      "ptu_control": "0.0.1+jog.20261118.3",
+      "satgs": "0.0.1+jog.20261118.3",
+      "serialptu": "0.0.1+jog.20261118.3",
+      "stomp.py": "8.1.0+bench.20261117.1"
+    },
+    "evidence": "package_metadata_only",
+    "source_bytes_verified": false,
+    "target_installation_verified": false
+  },
+  "last_operation": {
+    "active_run_changed": false,
+    "changed": true,
+    "kind": "components",
+    "partial": false,
+    "preview_id": "ed7632d73ad67bb1f70e0672e6c78a2eef178269ecbdae44211e4d3ff95dc7d5",
+    "receipt_recorded": true,
+    "result": "saved"
+  },
+  "limits": [
+    "Runtime submission requires a confirmed request binding this saved location to the selected owners.",
+    "Altitude reference is declared only; no datum conversion or measurement is proved.",
+    "Transport reception can pass while system health is critical and heading remains unqualified.",
+    "Incomplete messages and final unpublished aggregates are retained limitations; no final record is manufactured."
+  ],
+  "live_checks_started": false,
+  "location": {
+    "altitude_m": 12.0,
+    "altitude_qualified": false,
+    "altitude_reference": "unspecified",
+    "altitude_unit": "metres",
+    "identity": "8f967a38d36bae1437e40d8c946e036b67cf5bcf8f39dc001138347839aa4981",
+    "latitude_deg": 55.0,
+    "latitude_unit": "degrees",
+    "longitude_deg": 55.0,
+    "longitude_unit": "degrees",
+    "planning_identity": "8ca75c08e9aaa9c8ef02401680dea03905c22381edabf804635eaa0bf9d3c5fe",
+    "reference_provenance": "operator_declared_not_measured",
+    "source": "manual"
+  },
+  "manual_location": {
+    "altitude_m": 12.0,
+    "altitude_qualified": false,
+    "altitude_reference": "unspecified",
+    "altitude_unit": "metres",
+    "identity": "8f967a38d36bae1437e40d8c946e036b67cf5bcf8f39dc001138347839aa4981",
+    "latitude_deg": 55.0,
+    "latitude_unit": "degrees",
+    "longitude_deg": 55.0,
+    "longitude_unit": "degrees",
+    "planning_identity": "8ca75c08e9aaa9c8ef02401680dea03905c22381edabf804635eaa0bf9d3c5fe",
+    "reference_provenance": "operator_declared_not_measured",
+    "source": "manual"
+  },
+  "measured_gps": {
+    "altitude_reference": "unspecified",
+    "altitude_unit": "metres",
+    "available": false,
+    "coordinates": null,
+    "fix": "unknown",
+    "freshness": "unknown",
+    "horizontal_reference": "unspecified",
+    "latitude_unit": "degrees",
+    "live_hardware_observed": false,
+    "longitude_unit": "degrees",
+    "observation_time": null,
+    "provenance": "no_admitted_observation",
+    "source_id": null,
+    "time_basis": "synthetic_fixture_not_live_clock",
+    "unavailable_reason": "No GPS observation was admitted.",
+    "valid_for_station_selection": false
+  },
+  "observations": {
+    "calibration": "unqualified",
+    "configuration": "selected_local",
+    "connection": "unknown",
+    "fix": "unknown",
+    "freshness": "unknown",
+    "heading": "unqualified",
+    "installation": "unknown",
+    "live_hardware_observed": false,
+    "message_receipt": "unknown",
+    "operation_result": "saved",
+    "provenance": "synthetic_replay",
+    "state": "unknown",
+    "system_health": "unknown",
+    "transport_check": "unknown"
+  },
+  "operation_results": [
+    {
+      "active_run_changed": false,
+      "changed": false,
+      "configuration_saved": false,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": false,
+      "preview_id": "146c036758d28beb7d90535421ba73de9d239295d96dddf0b18412686277f212",
+      "receipt_recorded": true,
+      "result": "unchanged",
+      "station_revision": "5e6f03c33028d2eb7fb268dd1bef448dc153c2d6fda0b304ab27a31000178480",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": true,
+      "configuration_saved": true,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": true,
+      "preview_id": "18e44432c41ba8f77eb6f1d76c110219dbb4e5531db633a6744643be45b273f2",
+      "receipt_recorded": true,
+      "result": "saved",
+      "station_revision": "5e6f03c33028d2eb7fb268dd1bef448dc153c2d6fda0b304ab27a31000178480",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": true,
+      "configuration_saved": true,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": true,
+      "preview_id": "20e1207ead80c4b13bfd9f34f56af86e82b68e4ab9809e32a31cdf1b98f82d36",
+      "receipt_recorded": true,
+      "result": "saved",
+      "station_revision": "2f27ddc808a1a963426ef995c7be5c1464d8d932feb5c9f53094666e1c28d447",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": true,
+      "configuration_saved": true,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": true,
+      "preview_id": "70a6fd02af18cd4a1fc3e7bd072486ec2101de63ac440d8eb1648460e49f1982",
+      "receipt_recorded": true,
+      "result": "saved",
+      "station_revision": "2106c8d5748bc94367a4824db807795f4c8d0567e1b2bfe1d40ecef0c9bb2894",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": false,
+      "configuration_saved": false,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": false,
+      "preview_id": "8c4a1233b9ec8f543d1692dec9d20cdb24a8f0818b6eaa5f3cd60dddfdbe4ebf",
+      "receipt_recorded": true,
+      "result": "unchanged",
+      "station_revision": "f55ce492c030ac8ba1c8678584b7b316b8888fc84a163ab9356fa6c105fd23cf",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": true,
+      "configuration_saved": true,
+      "kind": "location",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": true,
+      "preview_id": "b607a68b73b54c5bfc5c6eddce1d4623ea57b7df09a012fabd1f0f40dfba30cf",
+      "receipt_recorded": true,
+      "result": "saved",
+      "station_revision": "d8e055f5702a5ec13dc4b49d117c68b05076fd1b61179a612f19a181c239122c",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": true,
+      "configuration_saved": true,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": true,
+      "preview_id": "c0d6fa668aad56f265d96f27e0d845dbccb6d965576ce91ce2766710d8ff253f",
+      "receipt_recorded": true,
+      "result": "saved",
+      "station_revision": "80d450ed27aee44388e12c8bc167efe466167e83331df8a72d0d8f81202a04bb",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    },
+    {
+      "active_run_changed": false,
+      "changed": true,
+      "configuration_saved": true,
+      "kind": "components",
+      "operation": "apply",
+      "owner_reinitialization_required": true,
+      "owner_state": "not_checked",
+      "partial": false,
+      "planning_revalidation_required": true,
+      "preview_id": "ed7632d73ad67bb1f70e0672e6c78a2eef178269ecbdae44211e4d3ff95dc7d5",
+      "receipt_recorded": true,
+      "result": "saved",
+      "station_revision": "f55ce492c030ac8ba1c8678584b7b316b8888fc84a163ab9356fa6c105fd23cf",
+      "warnings": [],
+      "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+    }
+  ],
+  "owner_context_verified": false,
+  "owner_reinitialization_required": true,
+  "owner_state": "not_checked",
+  "planning_only": true,
+  "plans": [
+    {
+      "plan_id": "131fd81bda8cb6b8cdcc7a03a52ac403bc595acf5204c4f86ba2b1308837529b",
+      "planning_only": true,
+      "revalidation_required": true,
+      "station_revision": "f55ce492c030ac8ba1c8678584b7b316b8888fc84a163ab9356fa6c105fd23cf"
+    },
+    {
+      "plan_id": "33d2fc772592b8886ed4adcc6c1b971398315b6efd819e80115efd247d9ef41c",
+      "planning_only": true,
+      "revalidation_required": true,
+      "station_revision": "d8e055f5702a5ec13dc4b49d117c68b05076fd1b61179a612f19a181c239122c"
+    },
+    {
+      "plan_id": "39d08796e66d69bf77aa00d91ef58518b484056ef3f01508746fb3673d7d5dd0",
+      "planning_only": true,
+      "revalidation_required": true,
+      "station_revision": "2f27ddc808a1a963426ef995c7be5c1464d8d932feb5c9f53094666e1c28d447"
+    },
+    {
+      "plan_id": "9d267ce76cf15e9b6fc44344ae99fa790e7211a08baf3aa8dd8c136c25f57139",
+      "planning_only": true,
+      "revalidation_required": true,
+      "station_revision": "2106c8d5748bc94367a4824db807795f4c8d0567e1b2bfe1d40ecef0c9bb2894"
+    }
+  ],
+  "report_kind": "operator_workspace_inspection",
+  "schema_version": 1,
+  "selection": {
+    "host_roles": [
+      "controller",
+      "pointing_controller",
+      "rf_controller"
+    ],
+    "id": "full_msel",
+    "instances": [],
+    "preset": "full_msel",
+    "release_id": null,
+    "revision": 1,
+    "schema_version": 1,
+    "selections": [
+      {
+        "component": "broker.activemq",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "system"
+      },
+      {
+        "component": "cyberpowerpdu",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "dsi_instruments",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "execution.pass_runner",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "ground_station",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "meteor-api",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "msel_post_processing",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "orbit.pass_finder",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "orchestration.queue_manager",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "pixhawk",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "pointing.dual_gps",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "station_hardware"
+      },
+      {
+        "component": "pointing.pixhawk",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "pointing.ptu",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "pointing.qpt130",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "station_hardware"
+      },
+      {
+        "component": "power.pdu_hpa",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "processing.msel_post_processing",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "recording.signal_hound",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "rf.frontend",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "satgs"
+      },
+      {
+        "component": "sat_tracker",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "serialptu",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "signal_hound",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "signal_hound_native_wrapper",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "repository"
+      },
+      {
+        "component": "time.ntp",
+        "instance_ids": [],
+        "mode": "install",
+        "provider": "system"
+      }
+    ],
+    "target": {
+      "environment": "unknown",
+      "id": "unspecified"
+    }
+  },
+  "station_name": "Station",
+  "station_revision": "1ece288579a3e8287190e9e21135dfe77eb0c53fc8cdb68c447f5713b8cd9506",
+  "status": {
+    "calibration": "unqualified",
+    "configuration": "selected_local",
+    "connection": "unknown",
+    "fix": "unknown",
+    "freshness": "unknown",
+    "heading": "unqualified",
+    "installation": "unknown",
+    "message_receipt": "unknown",
+    "operation_result": "saved",
+    "system_health": "unknown",
+    "transport_check": "unknown"
+  },
+  "workspace": "/home/admin/satgs/station",
+  "workspace_id": "cf0acc4e578749ebb8f075a49030d5e5"
+}
