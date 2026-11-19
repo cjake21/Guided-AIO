@@ -1,0 +1,35 @@
+{
+  "cleanup_errors": [],
+  "command": [
+    "/home/admin/satgs-jog-20261118-v3-app-manager/bin/python",
+    "-I",
+    "-B",
+    "-S",
+    "/home/admin/Downloads/satgs-jog-20261118.3/support/child.py",
+    "--binding",
+    "/home/admin/satgs-jog-20261118-v3-acceptance/operator-acceptance-bogo8aiq/binding.json",
+    "--lane",
+    "bench",
+    "--scratch",
+    "/home/admin/satgs-jog-20261118-v3-acceptance/operator-lane-irlb83cl"
+  ],
+  "cwd": "/home/admin/Downloads/satgs-jog-20261118.3/support",
+  "environment": {
+    "GOTOBLAS_MAIN_FREE": "1",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_MAIN_FREE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "STOMP_SKIP_HOSTNAME_SCAN": "1",
+    "TZ": "UTC"
+  },
+  "start_utc": "2026-11-18T13:51:04.627501+00:00",
+  "status": "failed",
+  "stream_limit_bytes": 1048576,
+  "terminate_grace_seconds": 0,
+  "timeout_seconds": 120
+}
