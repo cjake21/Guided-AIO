@@ -1,9 +1,0 @@
-{
-  "hashes_diagnostic_only": true,
-  "launcher_exit_to_return": 1,
-  "observed_runner_exit": 1,
-  "outer_exit_observation": "selected runner OS exit observed by outer launcher; outer return decision recorded",
-  "report_sha256": "e3010fe3be8f948cfb46ffbbc299f92a541a0f2e389a4b71cf157c2207329fbd",
-  "status": "FAIL",
-  "summary_sha256": "67fcafaec4071c7ec942c5ed0e74514e087a095338b1f74ad195be28cc630bb5"
-}
