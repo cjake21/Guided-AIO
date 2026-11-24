@@ -1,0 +1,6 @@
+admin@guided-arrow-aio-01:~/Downloads/satgs-jog-20261124.1-support-fix-20261124 $ ls -l "$HOME/.local/share/satgs-launchers/jog-20261124/daily.py" "$HOME/.config/satgs/operator.json" "$HOME/satgs-jog-20261124-app-manager/bin/python"
+ls: cannot access '/home/admin/.local/share/satgs-launchers/jog-20261124/daily.py': No such file or directory
+-rw------- 1 admin admin     190 Nov 23 09:46 /home/admin/.config/satgs/operator.json
+-rwxr-xr-x 1 admin admin 6616880 Nov 23 10:22 /home/admin/satgs-jog-20261124-app-manager/bin/python
+admin@guided-arrow-aio-01:~/Downloads/satgs-jog-20261124.1-support-fix-20261124 $ cat /home/admin/.config/satgs/operator.json
+{"application": "/home/admin/satgs-jog-20261119-v2-app-manager", "candidate_version": "0.0.1+jog.20261119.2", "schema": "satgs-daily-selection.v1", "workspace": "/home/admin/satgs/station"}
